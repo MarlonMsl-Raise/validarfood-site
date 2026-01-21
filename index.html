@@ -1,489 +1,374 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Validar Food | Etiquetas, Estoque, Validade e Automação</title>
+  <meta name="description" content="Plataforma operacional para Food Service: etiquetas com QR, validade, estoque e automações. Menos perda, mais padrão e rastreabilidade."/>
+  <meta name="theme-color" content="#f59e0b"/>
 
-  <title>Validar Food | Etiquetas, Estoque e Automação para Food Service</title>
-  <meta name="description" content="Plataforma operacional para restaurantes e redes: etiquetas com QR, validade, rastreabilidade, gestão de estoque e automações com Google Workspace." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta property="og:title" content="Validar Food" />
-  <meta property="og:description" content="Operação de verdade, com rastreabilidade e velocidade. Etiquetas, validade, estoque e automações." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ff8a00' d='M10 44L30 10h12L22 44z'/%3E%3Cpath fill='%23111111' d='M26 54l18-34h10L36 54z'/%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- JSON-LD (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Validar Food",
-    "url":"https://validarfood.com.br",
-    "description":"Plataforma operacional para food service: etiquetas, validade, rastreabilidade, estoque e automações.",
-    "sameAs":[]
-  }
-  </script>
+  <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
-
 <body>
-  <div class="bg-glow"></div>
 
-  <!-- Top bar -->
-  <header class="top">
-    <div class="container top-inner">
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container nav">
       <a class="brand" href="#home" aria-label="Validar Food">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">
-          <strong>Validar</strong> <span>Food</span>
-        </span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>Validar <b>Food</b></span>
       </a>
 
-      <nav class="nav" aria-label="Navegação principal">
+      <nav class="menu" aria-label="Navegação">
         <a href="#solucoes">Soluções</a>
         <a href="#planos">Planos</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#cases">Cases</a>
+        <a href="#como">Como funciona</a>
+        <a href="#integracoes">Integrações</a>
+        <a href="#faq">Dúvidas</a>
         <a href="#contato">Contato</a>
       </nav>
 
-      <div class="top-cta">
-        <a class="btn ghost" href="#contato">Agendar demonstração</a>
-        <a class="btn primary" id="btnWhatsTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <div class="nav-cta">
+        <a class="btn" href="https://wa.me/552126516226" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-primary" href="#contato">Agendar demonstração</a>
       </div>
-
-      <button class="hamb" id="hamb" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="mobile" id="mobileNav" hidden>
-      <a href="#solucoes">Soluções</a>
-      <a href="#planos">Planos</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#cases">Cases</a>
-      <a href="#contato">Contato</a>
-      <a class="btn primary" id="btnWhatsMobile" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <main id="home">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <div class="pill">Plataforma operacional para Food Service</div>
-          <h1>Operação de verdade, com <span class="grad">rastreabilidade</span> e <span class="grad2">velocidade</span>.</h1>
-          <p>
-            Etiquetas, validade, estoque e automações que padronizam sua rotina — do recebimento à produção.
-            Feito para quem vive a operação no dia a dia e precisa de controle sem burocracia.
-          </p>
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Plataforma para Food Service</div>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="#contato">Agendar demonstração</a>
-            <a class="btn ghost" id="btnWhatsHero" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
-          </div>
+        <h1 class="h1">
+          Operação de verdade, com
+          <span class="accent">rastreabilidade</span>
+          e velocidade.
+        </h1>
 
-          <div class="hero-metrics">
-            <div class="metric">
-              <div class="metric-num">Etiquetas + QR</div>
-              <div class="metric-label">Lote • validade • padrão</div>
-            </div>
-            <div class="metric">
-              <div class="metric-num">Estoque</div>
-              <div class="metric-label">Entradas • saídas • inventário</div>
-            </div>
-            <div class="metric">
-              <div class="metric-num">Automação</div>
-              <div class="metric-label">Google Workspace • Apps Script</div>
-            </div>
-          </div>
+        <p class="lead">
+          Etiquetas, validade, estoque e automações que padronizam sua rotina e reduzem perdas —
+          do recebimento à produção.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contato">Agendar demonstração</a>
+          <a class="btn" href="https://wa.me/552126516226" target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
 
-        <div class="hero-right">
-          <div class="card big">
-            <div class="card-head">
-              <div class="badge">Visão Operacional</div>
-              <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
-            </div>
+        <div class="checklist">
+          <div class="check"><i aria-hidden="true"></i><div>Etiquetas inteligentes com QR Code</div></div>
+          <div class="check"><i aria-hidden="true"></i><div>Controle de validade automatizado</div></div>
+          <div class="check"><i aria-hidden="true"></i><div>Gestão de estoque em tempo real</div></div>
+        </div>
+      </div>
 
-            <div class="kpi-grid">
-              <div class="kpi">
-                <div class="kpi-title">Validades críticas</div>
-                <div class="kpi-value">—</div>
-                <div class="kpi-sub">Alertas por criticidade</div>
-              </div>
-              <div class="kpi">
-                <div class="kpi-title">Saldo por item</div>
-                <div class="kpi-value">—</div>
-                <div class="kpi-sub">Por local e movimentação</div>
-              </div>
-              <div class="kpi">
-                <div class="kpi-title">Rastreabilidade</div>
-                <div class="kpi-value">QR</div>
-                <div class="kpi-sub">Lote + histórico</div>
-              </div>
-              <div class="kpi">
-                <div class="kpi-title">Impressão remota</div>
-                <div class="kpi-value">Print</div>
-                <div class="kpi-sub">Fila + status</div>
-              </div>
-            </div>
-
-            <div class="mini">
-              <div class="mini-row">
-                <span class="dot ok"></span>
-                <span>Etiqueta impressa + saldo atualizado</span>
-                <span class="tag ok">OK</span>
-              </div>
-              <div class="mini-row">
-                <span class="dot warn"></span>
-                <span>Imprimiu, mas falhou atualização</span>
-                <span class="tag warn">Atenção</span>
-              </div>
-              <div class="mini-row">
-                <span class="dot bad"></span>
-                <span>Falha no processamento</span>
-                <span class="tag bad">Erro</span>
-              </div>
-            </div>
-
-            <div class="note">
-              * Layout ilustrativo. Você personaliza KPIs, cores e módulos por cliente.
-            </div>
-          </div>
-
-          <div class="card small">
-            <div class="small-title">Integrações que a operação entende</div>
-            <div class="chips">
-              <span>Google Sheets</span><span>Drive</span><span>Gmail</span>
-              <span>Apps Script</span><span>AppSheet</span><span>BigQuery</span>
-              <span>PrintNode</span><span>QR Code</span>
-            </div>
+      <div class="hero-card" aria-label="Demonstração visual">
+        <div class="image">
+          <div class="float">
+            <b>Controle em tempo real</b>
+            <small>Dashboard Operacional · Ativo</small>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Dor / Ganho -->
-    <section class="section">
-      <div class="container">
-        <div class="split">
-          <div>
-            <h2>Menos perda. Mais padrão. Zero bagunça.</h2>
-            <p class="muted">
-              A Validar Food foi pensada para resolver o que machuca a operação: validade sem controle, retirada sem histórico,
-              entrada confusa, inventário que ninguém confia e retrabalho todo santo dia.
-            </p>
-          </div>
-          <div class="grid bullets">
-            <div class="bullet">Reduza desperdício com validade e rastreabilidade</div>
-            <div class="bullet">Padronize etiquetas e processos por unidade</div>
-            <div class="bullet">Controle entradas, saídas e inventário</div>
-            <div class="bullet">Automatize rotinas com Google Workspace</div>
-            <div class="bullet">Impressão rápida e remota de etiquetas</div>
-            <div class="bullet">Histórico para auditoria e gestão</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Soluções -->
-    <section class="section" id="solucoes">
-      <div class="container">
-        <div class="head">
-          <h2>Soluções</h2>
-          <p class="muted">Módulos que encaixam no seu nível de maturidade — do essencial ao completo.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card feature">
-            <h3>Etiquetas & Produção</h3>
-            <p>QR Code, lote, validade, padronização e impressão remota para a operação rodar no ritmo certo.</p>
-            <ul>
-              <li>Etiqueta 60x60 (ou custom)</li>
-              <li>QR para rastreio e conferência</li>
-              <li>Rotinas diárias para validade</li>
-              <li>Status de impressão (OK/atenção/erro)</li>
-            </ul>
-          </article>
-
-          <article class="card feature">
-            <h3>Gestão de Estoque</h3>
-            <p>Entradas, saídas, inventário e saldo por local com histórico — sem “achismo”.</p>
-            <ul>
-              <li>Entrada por recebimento</li>
-              <li>Saídas manuais e automáticas</li>
-              <li>Saldo por item e por local</li>
-              <li>Logs e auditoria</li>
-            </ul>
-          </article>
-
-          <article class="card feature">
-            <h3>Automação & Integrações</h3>
-            <p>Google Workspace + Apps Script para automatizar rotinas, reduzir retrabalho e ganhar tempo.</p>
-            <ul>
-              <li>Drive para PDFs e evidências</li>
-              <li>Gmail para envio automático</li>
-              <li>BigQuery para escala</li>
-              <li>PrintNode para impressão remota</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Planos -->
-    <section class="section" id="planos">
-      <div class="container">
-        <div class="head">
-          <h2>Planos</h2>
-          <p class="muted">Escolha o nível de controle que sua operação precisa hoje — e evolua quando quiser.</p>
-        </div>
-
-        <div class="pricing">
-          <div class="card price">
-            <div class="price-top">
-              <h3>Plano Essencial</h3>
-              <div class="price-value"><span class="small">R$</span> 199<span class="small">/mês</span></div>
-              <div class="price-sub">+ implantação (placeholder)</div>
-            </div>
-            <ul>
-              <li>Criação de etiquetas para operação</li>
-              <li>Cadastro de materiais</li>
-              <li>Controle mínimo de saldo (entradas/baixas manuais)</li>
-              <li>Ideal para começar rápido</li>
-            </ul>
-            <a class="btn primary" href="#contato">Quero esse</a>
-          </div>
-
-          <div class="card price highlight">
-            <div class="ribbon">Mais completo</div>
-            <div class="price-top">
-              <h3>Plano Completo</h3>
-              <div class="price-value"><span class="small">R$</span> 299<span class="small">/mês</span></div>
-              <div class="price-sub">+ implantação (placeholder)</div>
-            </div>
-            <ul>
-              <li>Gestão de estoque completa</li>
-              <li>Entradas, saídas, inventário, movimentações</li>
-              <li>Etiquetas + validade + rastreabilidade</li>
-              <li>Rotinas automáticas e dashboards</li>
-            </ul>
-            <a class="btn primary" href="#contato">Agendar demo</a>
-          </div>
-        </div>
-
-        <div class="note center">
-          * Valores e escopo podem ser ajustados conforme rede/multi-unidade e nível de automação.
-        </div>
-      </div>
-    </section>
-
-    <!-- Como funciona -->
-    <section class="section" id="como-funciona">
-      <div class="container">
-        <div class="head">
-          <h2>Como funciona</h2>
-          <p class="muted">Implantação rápida, com foco em deixar a operação rodando primeiro — e evoluir depois.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <h3>Diagnóstico</h3>
-            <p>Entendemos fluxo, dores e prioridade: validade, etiqueta, estoque, auditoria.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <h3>Estruturação</h3>
-            <p>Cadastro e padrões: materiais, armazenagem, layouts de etiqueta e rotinas.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <h3>Implantação</h3>
-            <p>Treinamento do time e ajustes finos na operação real.</p>
-          </div>
-          <div class="step">
-            <div class="step-num">4</div>
-            <h3>Automação</h3>
-            <p>Rotinas, integrações e melhoria contínua com indicadores e alertas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cases -->
-    <section class="section" id="cases">
-      <div class="container">
-        <div class="head">
-          <h2>Cases & Resultados</h2>
-          <p class="muted">Aqui você pode inserir cases (Orly, Made in Bel, etc.) com números quando quiser.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card case">
-            <h3>Case 01 (placeholder)</h3>
-            <p>Redução de perdas e padronização de etiquetas com QR e rotina de validade.</p>
-            <div class="case-metrics">
-              <span>↓ desperdício</span><span>↑ velocidade</span><span>↑ rastreio</span>
-            </div>
-          </article>
-          <article class="card case">
-            <h3>Case 02 (placeholder)</h3>
-            <p>Gestão de estoque com entradas/saídas, auditoria e visão operacional por unidade.</p>
-            <div class="case-metrics">
-              <span>Inventário confiável</span><span>Logs</span><span>Saldo por local</span>
-            </div>
-          </article>
-          <article class="card case">
-            <h3>Case 03 (placeholder)</h3>
-            <p>Integrações com Google Workspace e impressão remota para operação multi-ponto.</p>
-            <div class="case-metrics">
-              <span>Automação</span><span>Drive</span><span>PrintNode</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Conteúdos (placeholder) -->
-    <section class="section" id="conteudos">
-      <div class="container">
-        <div class="head">
-          <h2>Conteúdos</h2>
-          <p class="muted">Espaço para artigos e insights (opcional). Pode virar blog depois.</p>
-        </div>
-
-        <div class="cards">
-          <article class="card post">
-            <h3>Como reduzir desperdício com validade</h3>
-            <p>Checklist de rotina + etiqueta com rastreabilidade para ganhar consistência.</p>
-            <a class="link" href="#" aria-disabled="true">Em breve</a>
-          </article>
-          <article class="card post">
-            <h3>Gestão de estoque na prática</h3>
-            <p>Entradas, saídas e inventário que o time realmente usa.</p>
-            <a class="link" href="#" aria-disabled="true">Em breve</a>
-          </article>
-          <article class="card post">
-            <h3>Automação com Google Workspace</h3>
-            <p>Como eliminar retrabalho usando Apps Script + planilhas.</p>
-            <a class="link" href="#" aria-disabled="true">Em breve</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section class="section" id="contato">
-      <div class="container">
-        <div class="head">
-          <h2>Contato</h2>
-          <p class="muted">Vamos montar a versão ideal para sua operação.</p>
-        </div>
-
-        <div class="contact">
-          <div class="card contact-card">
-            <h3>Agendar demonstração</h3>
-            <p class="muted">Preencha e a gente entra em contato. Ou chama no WhatsApp direto.</p>
-
-            <!-- Form simples (troque o action para Formspree/Google Forms) -->
-            <form class="form" action="#" method="post" onsubmit="return window.VALIDAR.onFormSubmit(event)">
-              <div class="row">
-                <label>
-                  Nome
-                  <input required name="nome" placeholder="Seu nome" />
-                </label>
-                <label>
-                  Empresa
-                  <input required name="empresa" placeholder="Ex: Orly Burguer" />
-                </label>
-              </div>
-              <div class="row">
-                <label>
-                  WhatsApp
-                  <input required name="whatsapp" placeholder="(xx) xxxxx-xxxx" />
-                </label>
-                <label>
-                  Segmento
-                  <select name="segmento">
-                    <option>Hamburgueria</option>
-                    <option>Restaurante</option>
-                    <option>Padaria</option>
-                    <option>Rede / Multi-unidade</option>
-                    <option>Outro</option>
-                  </select>
-                </label>
-              </div>
-
-              <label>
-                Mensagem
-                <textarea name="mensagem" rows="4" placeholder="Conte o que você quer padronizar e controlar..."></textarea>
-              </label>
-
-              <div class="form-actions">
-                <button class="btn primary" type="submit">Enviar</button>
-                <a class="btn ghost" id="btnWhatsContact" href="#" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-
-              <div class="form-note" id="formNote" aria-live="polite"></div>
-            </form>
-          </div>
-
-          <div class="card contact-card">
-            <h3>Atendimento</h3>
-            <div class="info">
-              <div><span class="label">WhatsApp:</span> <span id="whatsDisplay">defina no script.js</span></div>
-              <div><span class="label">E-mail:</span> <a class="link" id="emailLink" href="#">contato@validarfood.com.br</a></div>
-              <div><span class="label">Atuação:</span> Brasil (remoto) • implantação por operação</div>
-            </div>
-
-            <div class="divider"></div>
-
-            <h4>O que você ganha em 30 dias</h4>
-            <ul class="checks">
-              <li>Padronização de etiqueta e rotina</li>
-              <li>Controle mínimo ou completo (conforme plano)</li>
-              <li>Visão operacional e histórico</li>
-              <li>Base pronta para evoluir (multi-unidade, integrações, BigQuery)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container foot">
-        <div class="foot-left">
-          <div class="brand mini-brand">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span class="brand-text"><strong>Validar</strong> <span>Food</span></span>
-          </div>
-          <p class="muted">Etiquetas • Validade • Estoque • Automação • Rastreabilidade</p>
-        </div>
-
-        <div class="foot-links">
-          <a href="#solucoes">Soluções</a>
-          <a href="#planos">Planos</a>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#contato">Contato</a>
-          <a href="#" aria-disabled="true">Termos</a>
-          <a href="#" aria-disabled="true">Privacidade</a>
-        </div>
-      </div>
-      <div class="container foot-bottom">
-        <small>© <span id="year"></span> Validar Food. Todos os direitos reservados.</small>
-      </div>
-    </footer>
-
-    <a class="float-whats" id="btnWhatsFloat" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-      <span>WhatsApp</span>
-    </a>
+    </div>
   </main>
 
-  <script src="assets/script.js"></script>
+  <!-- DOR -> CONTROLE -->
+  <section class="section" id="solucoes">
+    <div class="container">
+      <h2>Da dor para o controle</h2>
+      <p class="sub">Transforme problemas do dia a dia em processos padronizados e automatizados.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Antes: perdas por vencimento</h3>
+          <p>Agora: alertas automáticos de validade crítica e priorização por criticidade.</p>
+        </div>
+        <div class="card">
+          <h3>Antes: validade sem controle</h3>
+          <p>Agora: rastreabilidade por lote, data e histórico de movimentações.</p>
+        </div>
+        <div class="card">
+          <h3>Antes: entrada/saída confusa</h3>
+          <p>Agora: movimentações registradas e visão clara do que entra e sai.</p>
+        </div>
+        <div class="card">
+          <h3>Antes: impressão manual e lenta</h3>
+          <p>Agora: etiquetas em segundos, com padronização por unidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE FAZ -->
+  <section class="section" id="oque">
+    <div class="container">
+      <h2>O que a Validar Food faz</h2>
+      <p class="sub">Duas frentes integradas para uma operação sem falhas: etiquetagem inteligente e gestão de estoque.</p>
+
+      <div class="grid-2">
+        <div class="card" style="border: none; background: linear-gradient(135deg, rgba(245,158,11,.16), rgba(251,146,60,.10));">
+          <h3>Etiquetas &amp; Produção</h3>
+          <p>Padronização total na rotina.</p>
+          <div style="height:12px"></div>
+          <p><b>QR Code Inteligente</b><br><span style="color:rgba(71,85,105,.95)">Cada item com código único para rastreio completo.</span></p>
+          <div style="height:10px"></div>
+          <p><b>Lote e Validade</b><br><span style="color:rgba(71,85,105,.95)">Informações claras em cada etiqueta, sempre atualizadas.</span></p>
+          <div style="height:10px"></div>
+          <p><b>Controle de criticidade</b><br><span style="color:rgba(71,85,105,.95)">Alertas visuais para itens próximos do vencimento.</span></p>
+        </div>
+
+        <div class="card">
+          <h3>Gestão de Estoque</h3>
+          <p>Visão completa do que entra e sai.</p>
+          <div style="height:12px"></div>
+          <p><b>Entradas e Saídas</b><br><span style="color:rgba(71,85,105,.95)">Registro em tempo real de todas as movimentações.</span></p>
+          <div style="height:10px"></div>
+          <p><b>Movimentações</b><br><span style="color:rgba(71,85,105,.95)">Transferências entre unidades e locais controladas.</span></p>
+          <div style="height:10px"></div>
+          <p><b>Inventário</b><br><span style="color:rgba(71,85,105,.95)">Contagem facilitada com leitura de QR Code.</span></p>
+          <div style="height:10px"></div>
+          <p><b>Custo</b><br><span style="color:rgba(71,85,105,.95)">Visibilidade do valor em estoque por produto.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRAÇÕES -->
+  <section class="section" id="integracoes">
+    <div class="container">
+      <h2>Integrações e automação</h2>
+      <p class="sub">Construído sobre o ecossistema Google, com integrações que funcionam do jeito que a sua operação precisa.</p>
+
+      <div class="grid-2">
+        <div class="card"><h3>Google Sheets</h3><p>Planilhas em tempo real com seus dados.</p></div>
+        <div class="card"><h3>Google Drive</h3><p>Backup automático de documentos e logs.</p></div>
+        <div class="card"><h3>Gmail</h3><p>Alertas e notificações por e-mail.</p></div>
+        <div class="card"><h3>Apps Script</h3><p>Automações customizadas sem código complexo.</p></div>
+        <div class="card"><h3>AppSheet</h3><p>Apps operacionais mobile prontos para uso.</p></div>
+        <div class="card"><h3>BigQuery</h3><p>Base escalável para análises e auditoria.</p></div>
+        <div class="card"><h3>PrintNode</h3><p>Impressão remota de etiquetas em segundos.</p></div>
+        <div class="card"><h3>QR Code</h3><p>Rastreabilidade total por código único.</p></div>
+      </div>
+
+      <div style="height:18px"></div>
+      <p class="sub" style="text-align:center;">
+        Precisa de outra integração? <a href="#contato"><b>Fale com nosso time</b></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section class="section" id="planos">
+    <div class="container">
+      <h2>Escolha o melhor para sua operação</h2>
+      <p class="sub">Planos flexíveis que crescem junto com seu negócio. Sem surpresas, sem letras miúdas.</p>
+
+      <div class="pricing">
+        <div class="price">
+          <h3>Essencial</h3>
+          <p style="margin:0;color:rgba(71,85,105,.95)">Ideal para começar a padronizar sua operação</p>
+          <div class="value">R$ 297 <span style="font-size:14px;color:rgba(71,85,105,.95)">/mês</span></div>
+          <ul>
+            <li>Etiquetas para operação com QR Code</li>
+            <li>Cadastro de materiais</li>
+            <li>Controle mínimo de saldo</li>
+            <li>Entradas e baixas manuais</li>
+            <li>Suporte por WhatsApp</li>
+            <li>Implantação assistida</li>
+          </ul>
+          <div style="height:16px"></div>
+          <a class="btn btn-primary" href="#contato">Quero uma proposta</a>
+        </div>
+
+        <div class="price featured">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.25);padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;margin-bottom:10px;">
+            ⭐ Mais escolhido
+          </div>
+          <h3>Completo</h3>
+          <p style="margin:0;color:rgba(255,255,255,.82)">Gestão total de estoque + etiquetas + automações</p>
+          <div class="value">R$ 597 <span style="font-size:14px;color:rgba(255,255,255,.82)">/mês</span></div>
+          <ul>
+            <li>Tudo do plano Essencial</li>
+            <li>Gestão completa de estoque</li>
+            <li>Entradas, saídas e inventário</li>
+            <li>Upload/integração de notas fiscais</li>
+            <li>Validade + rastreabilidade avançada</li>
+            <li>Dashboards e relatórios automáticos</li>
+            <li>Rotinas de automação configuráveis</li>
+            <li>Suporte prioritário</li>
+          </ul>
+          <div style="height:16px"></div>
+          <a class="btn btn-primary" href="#contato">Quero uma proposta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section" id="como">
+    <div class="container">
+      <h2>Como funciona</h2>
+      <p class="sub">Processo claro, do diagnóstico à operação rodando. Sem enrolação, sem surpresas.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>1) Diagnóstico rápido da operação</h3>
+          <p>Em uma call, mapeamos fluxos, gargalos e ferramentas atuais. Você sai com clareza do que melhorar.</p>
+        </div>
+        <div class="card">
+          <h3>2) Estruturação do cadastro</h3>
+          <p>Organizamos materiais, produtos e fornecedores. Base limpa e bem estruturada para o sistema funcionar.</p>
+        </div>
+        <div class="card">
+          <h3>3) Implantação e treinamento</h3>
+          <p>Configuração completa + treinamento na prática. Mão na massa até todo mundo estar seguro.</p>
+        </div>
+        <div class="card">
+          <h3>4) Automação + melhoria contínua</h3>
+          <p>Com a base rodando, ativamos automações e dashboards. Ajustes contínuos para evoluir junto com sua operação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>Perguntas comuns</h2>
+      <p class="sub">Respostas diretas para as principais dúvidas sobre a plataforma.</p>
+
+      <div class="faq">
+        <details>
+          <summary>Funciona para redes com várias lojas?</summary>
+          <p>Sim. A estrutura suporta múltiplas unidades, locais de estoque e regras por operação. A implantação é ajustada ao seu fluxo.</p>
+        </details>
+        <details>
+          <summary>Preciso trocar meus processos atuais?</summary>
+          <p>Não. A Validar Food entra para padronizar e automatizar o que você já faz. Ajustamos o mínimo necessário para funcionar melhor.</p>
+        </details>
+        <details>
+          <summary>Dá para usar com impressora térmica?</summary>
+          <p>Sim. Trabalhamos com impressoras térmicas e impressão remota. O modelo ideal depende do seu volume e tipo de etiqueta.</p>
+        </details>
+        <details>
+          <summary>Como fica histórico e rastreabilidade?</summary>
+          <p>Tudo fica registrado: lote, datas, movimentações, entradas/saídas, e histórico para auditoria e gestão.</p>
+        </details>
+        <details>
+          <summary>Quanto tempo para implantar?</summary>
+          <p>Depende do tamanho da operação. Em geral, começamos rápido e evoluímos por etapas: cadastro, rotinas e automações.</p>
+        </details>
+        <details>
+          <summary>Preciso de conhecimento técnico?</summary>
+          <p>Não. A implantação inclui configuração e treinamento. Seu time só precisa seguir o processo no app.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section" id="contato">
+    <div class="container">
+      <h2>Agende uma demonstração</h2>
+      <p class="sub">Conte um pouco da sua operação e a gente te mostra a Validar Food rodando na prática.</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Fale com a gente</h3>
+          <p><b>Email:</b> <a href="mailto:validarfood@gmail.com">validarfood@gmail.com</a></p>
+          <p><b>WhatsApp:</b> <a href="https://wa.me/552126516226" target="_blank" rel="noopener">+55 (21) 2651-6226</a></p>
+          <p><b>Local:</b> Rio de Janeiro, Brasil</p>
+
+          <div style="height:14px"></div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/552126516226" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn" href="mailto:validarfood@gmail.com">Enviar e-mail</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Pedido de proposta</h3>
+          <p style="color:rgba(71,85,105,.95);margin-top:0">
+            Preferir, me chama no WhatsApp com: <b>nome + cidade + número de lojas + volume de etiquetas/dia</b>.
+          </p>
+          <div style="height:8px"></div>
+          <p style="color:rgba(71,85,105,.95);margin:0">
+            Exemplo: “Marlon — RJ — 3 lojas — 250 etiquetas/dia — quero o Completo”.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between;">
+      <div style="max-width:48ch;">
+        <div class="brand" style="margin-bottom:10px;">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Validar <b>Food</b></span>
+        </div>
+        <p style="margin:0;color:rgba(71,85,105,.95)">
+          Plataforma de operação e gestão para food service. Etiquetas, estoque e automações que padronizam sua rotina.
+        </p>
+        <div style="height:12px"></div>
+        <p style="margin:0;color:rgba(71,85,105,.95)">
+          <a href="mailto:validarfood@gmail.com"><b>validarfood@gmail.com</b></a> ·
+          <a href="https://wa.me/552126516226" target="_blank" rel="noopener"><b>WhatsApp</b></a>
+        </p>
+      </div>
+
+      <div style="display:flex;gap:46px;flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:900;margin-bottom:10px;">Produto</div>
+          <div style="display:flex;flex-direction:column;gap:8px;color:rgba(71,85,105,.95)">
+            <a href="#solucoes">Soluções</a>
+            <a href="#planos">Planos</a>
+            <a href="#como">Como funciona</a>
+            <a href="#integracoes">Integrações</a>
+            <a href="#faq">Dúvidas</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:900;margin-bottom:10px;">Empresa</div>
+          <div style="display:flex;flex-direction:column;gap:8px;color:rgba(71,85,105,.95)">
+            <a href="#contato">Contato</a>
+            <a href="#home">Topo</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:900;margin-bottom:10px;">Legal</div>
+          <div style="display:flex;flex-direction:column;gap:8px;color:rgba(71,85,105,.95)">
+            <a href="#contato">Política de Privacidade</a>
+            <a href="#contato">LGPD</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:100%;border-top:1px solid rgba(15,23,42,.08);padding-top:14px;margin-top:10px;color:rgba(71,85,105,.85);font-size:13px">
+        © <span id="year"></span> Validar Food. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATS FLOAT -->
+  <button class="whats-float" aria-label="Abrir WhatsApp" onclick="window.open('https://wa.me/552126516226','_blank')">
+    <!-- ícone simples -->
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20.5 11.9c0 4.7-3.8 8.6-8.6 8.6-1.5 0-2.9-.4-4.1-1L3.5 20.5l1-4.1c-.6-1.2-1-2.6-1-4.1 0-4.7 3.8-8.6 8.6-8.6 4.7 0 8.4 3.8 8.4 8.2z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.2 9.2c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.3l.7 1.6c.1.2.1.5-.1.7l-.4.4c-.1.1-.1.3 0 .4.4.7 1.3 1.6 2.2 2 .1.1.3 0 .4-.1l.5-.5c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5v.5c0 .2 0 .4-.4.6-.4.2-1.3.4-2.3.1-1-.3-2.2-1-3.2-2-1-1-1.7-2.2-2-3.2-.3-1 .-1.9.2-2.3z" fill="white"/>
+    </svg>
+  </button>
+
+  <script src="/assets/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
