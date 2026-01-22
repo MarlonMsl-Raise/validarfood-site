@@ -1,73 +1,63 @@
 (function () {
   const CONFIG = {
-    // Ajuste aqui:
-    whatsappNumberE164: "55XXXXXXXXXXX", // ex: 5511999999999
-    whatsappDisplay: "(11) 99999-9999",
-    email: "contato@validarfood.com.br",
-    whatsappMessage: "Olá! Quero agendar uma demonstração da Validar Food."
+    whatsappNumberE164: "552126516226", 
+    whatsappDisplay: "(21) 2651-6226",
+    email: "validarfood@gmail.com",
+    whatsappMessage: "Olá! Gostaria de saber mais sobre a Validar Food."
   };
 
-  function buildWhatsUrl() {
-    const msg = encodeURIComponent(CONFIG.whatsappMessage);
-    return `https://wa.me/${CONFIG.whatsappNumberE164}?text=${msg}`;
-  }
-
+  // Atualiza links automaticamente
   function setWhatsLinks() {
-    const url = buildWhatsUrl();
-    const ids = ["btnWhatsTop", "btnWhatsHero", "btnWhatsContact", "btnWhatsFloat", "btnWhatsMobile"];
-    ids.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.href = url;
+    const msg = encodeURIComponent(CONFIG.whatsappMessage);
+    const url = `https://wa.me/${CONFIG.whatsappNumberE164}?text=${msg}`;
+    
+    // Pega todos os links que devem ir pro Whats
+    const links = document.querySelectorAll('a[href*="wa.me"]');
+    links.forEach(el => {
+      el.href = url;
     });
 
-    const display = document.getElementById("whatsDisplay");
-    if (display) display.textContent = CONFIG.whatsappDisplay;
-
-    const emailLink = document.getElementById("emailLink");
-    if (emailLink) {
-      emailLink.textContent = CONFIG.email;
-      emailLink.href = `mailto:${CONFIG.email}`;
-    }
-  }
-
-  function setupMobileMenu() {
-    const hamb = document.getElementById("hamb");
-    const mobile = document.getElementById("mobileNav");
-    if (!hamb || !mobile) return;
-
-    hamb.addEventListener("click", () => {
-      const open = hamb.getAttribute("aria-expanded") === "true";
-      hamb.setAttribute("aria-expanded", String(!open));
-      mobile.hidden = open;
-    });
-
-    mobile.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
-        hamb.setAttribute("aria-expanded", "false");
-        mobile.hidden = true;
-      });
-    });
-  }
-
-  function year() {
+    // Ano do rodapé
     const y = document.getElementById("year");
     if (y) y.textContent = String(new Date().getFullYear());
   }
 
-  // Form: por padrão não envia para lugar nenhum.
-  // Você pode trocar para Formspree/Google Forms depois.
-  window.VALIDAR = {
-    onFormSubmit: function (event) {
-      event.preventDefault();
-      const note = document.getElementById("formNote");
-      if (note) {
-        note.textContent = "Recebido! Agora é só clicar em WhatsApp para falar direto com a gente 🙂";
-      }
-      return false;
-    }
-  };
+  // Lógica do Menu Mobile
+  function setupMobileMenu() {
+    const hamb = document.getElementById("hamb");
+    const mobile = document.getElementById("mobileNav");
+    
+    if (!hamb || !mobile) return;
 
+    hamb.addEventListener("click", () => {
+      // Toggle da classe 'active'
+      const isOpen = mobile.classList.toggle("active");
+      
+      // Ajusta acessibilidade e ícone
+      hamb.setAttribute("aria-expanded", String(isOpen));
+      
+      // Troca ícone (Hambúrguer <-> X)
+      if (isOpen) {
+        hamb.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        document.body.style.overflow = "hidden"; // Trava rolagem do fundo
+      } else {
+        hamb.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        document.body.style.overflow = ""; // Destrava rolagem
+      }
+    });
+
+    // Fecha ao clicar em um link do menu
+    mobile.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        mobile.classList.remove("active");
+        hamb.setAttribute("aria-expanded", "false");
+        hamb.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        document.body.style.overflow = "";
+      });
+    });
+  }
+
+  // Inicializa
   setWhatsLinks();
   setupMobileMenu();
-  year();
 })();
