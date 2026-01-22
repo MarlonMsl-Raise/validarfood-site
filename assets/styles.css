@@ -1,5 +1,5 @@
 /* =========================
-   Validar Food - Professional Theme V3 (Analítico)
+   Validar Food - Professional Theme V4 Final
    ========================= */
 
 :root {
@@ -14,8 +14,7 @@
   --primary2: #f97316;
   --primaryDark: #d97706;
   
-  /* Cor escura para a faixa de números */
-  --darkSection: #0f172a; 
+  --darkSection: #0f172a; /* Cor escura para a faixa de números */
 
   --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   --shadowSoft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
@@ -23,8 +22,7 @@
   --radius: 16px;
   --radius2: 24px;
   
-  /* AUMENTAMOS A LARGURA PARA O DASHBOARD FICAR GIGANTE */
-  --max: 1350px; 
+  --max: 1350px; /* Largura estendida para telas HD */
   --font: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -90,11 +88,11 @@ a:hover { color: var(--primaryDark); }
 }
 .btn-primary:hover { color: white; filter: brightness(1.1); }
 
-/* --- HERO (COM DASHBOARD GRANDE) --- */
+/* --- HERO (COM DASHBOARD GIGANTE) --- */
 .hero { padding: 80px 0 60px; }
 .hero-grid {
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr; /* Imagem ocupa mais espaço */
+  grid-template-columns: 0.7fr 1.3fr; /* Imagem bem maior que texto */
   gap: 40px;
   align-items: center;
 }
@@ -122,7 +120,7 @@ a:hover { color: var(--primaryDark); }
   border-bottom: 2px solid #b45309; border-right: 2px solid #b45309; transform: rotate(45deg);
 }
 
-/* Hero Card (Print) */
+/* HERO CARD */
 .hero-card {
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius2); padding: 8px;
@@ -143,7 +141,7 @@ a:hover { color: var(--primaryDark); }
 .hero-card .float b { display: block; color: var(--text); font-size: 14px; }
 .hero-card .float small { color: var(--primaryDark); font-weight: 700; font-size: 12px; }
 
-/* --- NOVA SEÇÃO: STATS (Analítico) --- */
+/* --- STATS SECTION --- */
 .stats-section {
   background: var(--darkSection);
   color: white;
@@ -160,17 +158,46 @@ a:hover { color: var(--primaryDark); }
   display: block;
   font-size: 42px;
   font-weight: 800;
-  color: var(--primary); /* Laranja destaca no fundo escuro */
+  color: var(--primary); 
   margin-bottom: 5px;
   line-height: 1;
 }
-.stat-label {
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.7);
+.stat-label { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.7); }
+
+/* --- CARROSSEL INFINITO (Marquee) --- */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.marquee-container:before, .marquee-container:after {
+  content: ""; position: absolute; top: 0; width: 100px; height: 100%; z-index: 2;
+  pointer-events: none; /* Deixa clicar nas logos se necessário */
+}
+/* Gradiente para suavizar a entrada/saída das logos */
+.marquee-container:before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+.marquee-container:after { right: 0; background: linear-gradient(to left, #fff, transparent); }
+
+.marquee-content {
+  display: inline-flex;
+  gap: 60px; /* Espaço entre as logos */
+  animation: marquee 40s linear infinite; /* Tempo da animação */
+}
+.marquee-content img {
+  height: 60px; /* Altura padrão */
+  width: auto;
+  filter: grayscale(100%); opacity: 0.6; transition: 0.3s;
+}
+.marquee-content img:hover { filter: grayscale(0%); opacity: 1; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } 
+  /* Move -50% porque duplicamos a lista de imagens, criando o efeito de infinito */
 }
 
-/* --- SEÇÃO: SOLUÇÕES (Visual) --- */
+/* --- SECTIONS GERAL --- */
 .section { padding: 90px 0; }
 .section h2 { margin: 0 0 12px; font-size: 36px; font-weight: 800; color: #0f172a; }
 .section p.sub { margin: 0 0 40px; color: var(--muted); font-size: 18px; max-width: 60ch; }
@@ -181,37 +208,36 @@ a:hover { color: var(--primaryDark); }
   border-radius: var(--radius); padding: 28px;
   box-shadow: var(--shadowSoft); transition: all 0.3s ease;
 }
-.card:hover {
-  transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(245, 158, 11, 0.3);
-}
-.card h3 { margin: 0 0 10px; font-size: 18px; font-weight: 700; color: var(--text); }
-.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(245, 158, 11, 0.3); }
 
-/* Lista de Comparação (Problema vs Solução) */
+/* Cards Comparativos */
 .problem-card { border-left: 4px solid #ef4444; }
 .solution-card { border-left: 4px solid #22c55e; background: #f0fdf4; border-color: #22c55e; }
 .card-icon { font-size: 32px; margin-bottom: 12px; }
 .comparison-list { padding-left: 20px; margin: 10px 0 0; color: var(--muted); }
 .comparison-list li { margin-bottom: 8px; }
 
-/* --- CLIENTES (Logos) --- */
-.logos-grid {
+/* --- GALERIA DE ETIQUETAS --- */
+.grid-3-photos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Responsivo */
-  gap: 30px;
-  align-items: center;
-  justify-items: center;
-  opacity: 0.7;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
-.logo-item img {
-  max-width: 100%;
-  max-height: 60px; /* Tamanho padrão para as logos */
-  filter: grayscale(100%); /* Deixa preto e branco (elegante) */
-  transition: 0.3s;
+.photo-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadowSoft);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease;
+  height: 300px; /* Altura fixa */
 }
-.logo-item img:hover { filter: grayscale(0%); transform: scale(1.05); opacity: 1; }
+.photo-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.photo-card img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
 
-/* --- PRICING & FAQ & FOOTER --- */
+/* PRICING & FOOTER */
 .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
 .price {
   background: var(--card); border: 1px solid var(--border);
@@ -230,7 +256,7 @@ a:hover { color: var(--primaryDark); }
 
 .footer { border-top: 1px solid var(--border); padding: 60px 0 40px; background: #fff; }
 
-/* --- MOBILE --- */
+/* --- MOBILE RESPONSIVE --- */
 .btn-mobile-toggle { display: none; background: none; border: none; color: var(--text); padding: 5px; }
 .mobile-nav-overlay {
   display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0;
@@ -238,6 +264,7 @@ a:hover { color: var(--primaryDark); }
 }
 .mobile-nav-overlay.active { display: flex; }
 .mobile-nav-overlay a { font-size: 20px; font-weight: 600; color: var(--text); padding: 20px 0; border-bottom: 1px solid var(--bg2); }
+
 .whats-float {
   position: fixed; right: 24px; bottom: 24px; width: 60px; height: 60px;
   border-radius: 50%; background: #25D366; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
@@ -247,14 +274,16 @@ a:hover { color: var(--primaryDark); }
 
 @media (max-width: 1100px) {
   .hero-grid { grid-template-columns: 1fr 1fr; }
+  .grid-3-photos { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 980px) {
   .menu, .nav-cta { display: none; }
   .btn-mobile-toggle { display: block; }
-  .hero-grid, .grid-2, .pricing { grid-template-columns: 1fr; }
+  .hero-grid, .grid-2, .pricing, .grid-3-photos, .stats-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 40px; text-align: left; }
   .hero-card { order: -1; margin-bottom: 40px; }
   .logo-img { height: 42px; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .logos-grid { grid-template-columns: 1fr 1fr; }
+  .photo-card { height: auto; max-height: 300px; }
 }
