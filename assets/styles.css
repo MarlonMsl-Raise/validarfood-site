@@ -83,7 +83,7 @@ a:hover { color: var(--primaryDark); }
 
 /* Controle do tamanho da imagem da logo */
 .logo-img {
-  height: 80px; /* Aumentei de 40px para 55px */
+  height: 160px; /* Aumentei de 40px para 55px */
   width: auto;  
   display: block;
   object-fit: contain; /* Garante que a imagem não distorça */
@@ -436,5 +436,6 @@ a:hover { color: var(--primaryDark); }
   /* Diminui um pouco a logo no celular */
   .logo-img { height: 32px; }
 }
+
 
 
