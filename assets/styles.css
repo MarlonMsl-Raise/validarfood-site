@@ -22,7 +22,7 @@
 
   --radius: 16px;
   --radius2: 24px;
-  --max: 1200px; /* Largura um pouco maior para telas HD */
+  --max: 1350px; /* Largura um pouco maior para telas HD */
 
   /* Fonte Inter para visual "Tech" */
   --font: 'Inter', system-ui, -apple-system, sans-serif;
@@ -148,11 +148,27 @@ a:hover { color: var(--primaryDark); }
 .hero {
   padding: 80px 0 60px;
 }
+/* --- HERO GRID (AJUSTADO: IMAGEM GIGANTE) --- */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  /* 0.7fr para texto (menor) e 1.3fr para imagem (bem maior) */
+  grid-template-columns: 0.7fr 1.3fr; 
+  gap: 40px;
   align-items: center;
+}
+
+/* Ajuste importante para telas médias (notebooks pequenos) */
+@media (max-width: 1100px) {
+  .hero-grid {
+    /* Volta para meio a meio em telas menores para não espremer o texto */
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr; /* Um embaixo do outro no celular */
+  }
 }
 
 .badge {
@@ -448,4 +464,5 @@ a:hover { color: var(--primaryDark); }
       bottom: 10px;
   }
 }
+
 
