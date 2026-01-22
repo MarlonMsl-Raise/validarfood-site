@@ -9,12 +9,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body>
 
-  <!-- TOPBAR -->
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Validar Food">
@@ -22,7 +22,7 @@
         <span>Validar <b>Food</b></span>
       </a>
 
-      <nav class="menu" aria-label="Navegação">
+      <nav class="menu" aria-label="Navegação Desktop">
         <a href="#solucoes">Soluções</a>
         <a href="#planos">Planos</a>
         <a href="#como">Como funciona</a>
@@ -35,10 +35,25 @@
         <a class="btn" href="https://wa.me/552126516226" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn-primary" href="#contato">Agendar demonstração</a>
       </div>
+
+      <button class="btn-mobile-toggle" id="hamb" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
     </div>
   </header>
 
-  <!-- HERO -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <a href="#solucoes">Soluções</a>
+    <a href="#planos">Planos</a>
+    <a href="#como">Como funciona</a>
+    <a href="#integracoes">Integrações</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#contato">Contato</a>
+    <div style="margin-top:20px; display:flex; flex-direction:column; gap:10px">
+        <a href="https://wa.me/552126516226" target="_blank" class="btn btn-primary" style="justify-content:center; color:white;">Falar no WhatsApp</a>
+    </div>
+  </div>
+
   <main id="home" class="hero">
     <div class="container hero-grid">
       <div>
@@ -78,7 +93,6 @@
     </div>
   </main>
 
-  <!-- DOR -> CONTROLE -->
   <section class="section" id="solucoes">
     <div class="container">
       <h2>Da dor para o controle</h2>
@@ -105,41 +119,39 @@
     </div>
   </section>
 
-  <!-- O QUE FAZ -->
   <section class="section" id="oque">
     <div class="container">
       <h2>O que a Validar Food faz</h2>
       <p class="sub">Duas frentes integradas para uma operação sem falhas: etiquetagem inteligente e gestão de estoque.</p>
 
       <div class="grid-2">
-        <div class="card" style="border: none; background: linear-gradient(135deg, rgba(245,158,11,.16), rgba(251,146,60,.10));">
+        <div class="card" style="border-color: rgba(245,158,11,.3); background: linear-gradient(135deg, rgba(255,255,255,1), rgba(255,247,237,1));">
           <h3>Etiquetas &amp; Produção</h3>
           <p>Padronização total na rotina.</p>
           <div style="height:12px"></div>
-          <p><b>QR Code Inteligente</b><br><span style="color:rgba(71,85,105,.95)">Cada item com código único para rastreio completo.</span></p>
+          <p><b>QR Code Inteligente</b><br><span style="color:var(--muted)">Cada item com código único para rastreio completo.</span></p>
           <div style="height:10px"></div>
-          <p><b>Lote e Validade</b><br><span style="color:rgba(71,85,105,.95)">Informações claras em cada etiqueta, sempre atualizadas.</span></p>
+          <p><b>Lote e Validade</b><br><span style="color:var(--muted)">Informações claras em cada etiqueta, sempre atualizadas.</span></p>
           <div style="height:10px"></div>
-          <p><b>Controle de criticidade</b><br><span style="color:rgba(71,85,105,.95)">Alertas visuais para itens próximos do vencimento.</span></p>
+          <p><b>Controle de criticidade</b><br><span style="color:var(--muted)">Alertas visuais para itens próximos do vencimento.</span></p>
         </div>
 
         <div class="card">
           <h3>Gestão de Estoque</h3>
           <p>Visão completa do que entra e sai.</p>
           <div style="height:12px"></div>
-          <p><b>Entradas e Saídas</b><br><span style="color:rgba(71,85,105,.95)">Registro em tempo real de todas as movimentações.</span></p>
+          <p><b>Entradas e Saídas</b><br><span style="color:var(--muted)">Registro em tempo real de todas as movimentações.</span></p>
           <div style="height:10px"></div>
-          <p><b>Movimentações</b><br><span style="color:rgba(71,85,105,.95)">Transferências entre unidades e locais controladas.</span></p>
+          <p><b>Movimentações</b><br><span style="color:var(--muted)">Transferências entre unidades e locais controladas.</span></p>
           <div style="height:10px"></div>
-          <p><b>Inventário</b><br><span style="color:rgba(71,85,105,.95)">Contagem facilitada com leitura de QR Code.</span></p>
+          <p><b>Inventário</b><br><span style="color:var(--muted)">Contagem facilitada com leitura de QR Code.</span></p>
           <div style="height:10px"></div>
-          <p><b>Custo</b><br><span style="color:rgba(71,85,105,.95)">Visibilidade do valor em estoque por produto.</span></p>
+          <p><b>Custo</b><br><span style="color:var(--muted)">Visibilidade do valor em estoque por produto.</span></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INTEGRAÇÕES -->
   <section class="section" id="integracoes">
     <div class="container">
       <h2>Integrações e automação</h2>
@@ -156,14 +168,13 @@
         <div class="card"><h3>QR Code</h3><p>Rastreabilidade total por código único.</p></div>
       </div>
 
-      <div style="height:18px"></div>
+      <div style="height:24px"></div>
       <p class="sub" style="text-align:center;">
-        Precisa de outra integração? <a href="#contato"><b>Fale com nosso time</b></a>
+        Precisa de outra integração? <a href="#contato" style="color:var(--primaryDark); font-weight:700;">Fale com nosso time</a>
       </p>
     </div>
   </section>
 
-  <!-- PLANOS -->
   <section class="section" id="planos">
     <div class="container">
       <h2>Escolha o melhor para sua operação</h2>
@@ -172,8 +183,8 @@
       <div class="pricing">
         <div class="price">
           <h3>Essencial</h3>
-          <p style="margin:0;color:rgba(71,85,105,.95)">Ideal para começar a padronizar sua operação</p>
-          <div class="value">R$ 297 <span style="font-size:14px;color:rgba(71,85,105,.95)">/mês</span></div>
+          <p style="margin:0;color:var(--muted)">Ideal para começar a padronizar sua operação</p>
+          <div class="value" style="color:var(--primaryDark)">R$ 297 <span style="font-size:16px; font-weight:500; color:var(--muted)">/mês</span></div>
           <ul>
             <li>Etiquetas para operação com QR Code</li>
             <li>Cadastro de materiais</li>
@@ -182,17 +193,17 @@
             <li>Suporte por WhatsApp</li>
             <li>Implantação assistida</li>
           </ul>
-          <div style="height:16px"></div>
+          <div style="height:20px"></div>
           <a class="btn btn-primary" href="#contato">Quero uma proposta</a>
         </div>
 
         <div class="price featured">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.25);padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;margin-bottom:10px;">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.25);padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px;margin-bottom:14px;color:#fbbf24;">
             ⭐ Mais escolhido
           </div>
-          <h3>Completo</h3>
-          <p style="margin:0;color:rgba(255,255,255,.82)">Gestão total de estoque + etiquetas + automações</p>
-          <div class="value">R$ 597 <span style="font-size:14px;color:rgba(255,255,255,.82)">/mês</span></div>
+          <h3 style="color:#fff">Completo</h3>
+          <p style="margin:0;color:rgba(255,255,255,.8)">Gestão total de estoque + etiquetas + automações</p>
+          <div class="value">R$ 597 <span style="font-size:16px;font-weight:500;color:rgba(255,255,255,.6)">/mês</span></div>
           <ul>
             <li>Tudo do plano Essencial</li>
             <li>Gestão completa de estoque</li>
@@ -203,41 +214,39 @@
             <li>Rotinas de automação configuráveis</li>
             <li>Suporte prioritário</li>
           </ul>
-          <div style="height:16px"></div>
+          <div style="height:20px"></div>
           <a class="btn btn-primary" href="#contato">Quero uma proposta</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
   <section class="section" id="como">
     <div class="container">
       <h2>Como funciona</h2>
-      <p class="sub">Processo claro, do diagnóstico à operação rodando. Sem enrolação, sem surpresas.</p>
+      <p class="sub">Processo claro, do diagnóstico à operação rodando. Sem enrolação.</p>
 
       <div class="grid-2">
         <div class="card">
-          <h3>1) Diagnóstico rápido da operação</h3>
-          <p>Em uma call, mapeamos fluxos, gargalos e ferramentas atuais. Você sai com clareza do que melhorar.</p>
+          <h3>1) Diagnóstico rápido</h3>
+          <p>Em uma call, mapeamos fluxos e gargalos. Você sai com clareza do que melhorar.</p>
         </div>
         <div class="card">
           <h3>2) Estruturação do cadastro</h3>
-          <p>Organizamos materiais, produtos e fornecedores. Base limpa e bem estruturada para o sistema funcionar.</p>
+          <p>Organizamos materiais e produtos. Base limpa para o sistema funcionar.</p>
         </div>
         <div class="card">
           <h3>3) Implantação e treinamento</h3>
-          <p>Configuração completa + treinamento na prática. Mão na massa até todo mundo estar seguro.</p>
+          <p>Configuração completa + treinamento na prática. Mão na massa com o time.</p>
         </div>
         <div class="card">
-          <h3>4) Automação + melhoria contínua</h3>
-          <p>Com a base rodando, ativamos automações e dashboards. Ajustes contínuos para evoluir junto com sua operação.</p>
+          <h3>4) Automação contínua</h3>
+          <p>Ativamos automações e dashboards. Ajustes contínuos para evoluir a operação.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
       <h2>Perguntas comuns</h2>
@@ -246,33 +255,28 @@
       <div class="faq">
         <details>
           <summary>Funciona para redes com várias lojas?</summary>
-          <p>Sim. A estrutura suporta múltiplas unidades, locais de estoque e regras por operação. A implantação é ajustada ao seu fluxo.</p>
+          <p>Sim. A estrutura suporta múltiplas unidades, locais de estoque e regras por operação.</p>
         </details>
         <details>
           <summary>Preciso trocar meus processos atuais?</summary>
-          <p>Não. A Validar Food entra para padronizar e automatizar o que você já faz. Ajustamos o mínimo necessário para funcionar melhor.</p>
+          <p>Não. A Validar Food entra para padronizar o que você já faz. Ajustamos o mínimo necessário.</p>
         </details>
         <details>
           <summary>Dá para usar com impressora térmica?</summary>
-          <p>Sim. Trabalhamos com impressoras térmicas e impressão remota. O modelo ideal depende do seu volume e tipo de etiqueta.</p>
+          <p>Sim. Trabalhamos com impressoras térmicas (Zebra, Elgin, etc) e impressão remota via PrintNode.</p>
         </details>
         <details>
           <summary>Como fica histórico e rastreabilidade?</summary>
-          <p>Tudo fica registrado: lote, datas, movimentações, entradas/saídas, e histórico para auditoria e gestão.</p>
+          <p>Tudo fica registrado: lote, datas, movimentações e usuário responsável por cada ação.</p>
         </details>
         <details>
           <summary>Quanto tempo para implantar?</summary>
-          <p>Depende do tamanho da operação. Em geral, começamos rápido e evoluímos por etapas: cadastro, rotinas e automações.</p>
-        </details>
-        <details>
-          <summary>Preciso de conhecimento técnico?</summary>
-          <p>Não. A implantação inclui configuração e treinamento. Seu time só precisa seguir o processo no app.</p>
+          <p>Depende do tamanho da operação. Começamos rápido e evoluímos por etapas para não travar o dia a dia.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
   <section class="section" id="contato">
     <div class="container">
       <h2>Agende uma demonstração</h2>
@@ -285,7 +289,7 @@
           <p><b>WhatsApp:</b> <a href="https://wa.me/552126516226" target="_blank" rel="noopener">+55 (21) 2651-6226</a></p>
           <p><b>Local:</b> Rio de Janeiro, Brasil</p>
 
-          <div style="height:14px"></div>
+          <div style="height:20px"></div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/552126516226" target="_blank" rel="noopener">Chamar no WhatsApp</a>
             <a class="btn" href="mailto:validarfood@gmail.com">Enviar e-mail</a>
@@ -294,11 +298,11 @@
 
         <div class="card">
           <h3>Pedido de proposta</h3>
-          <p style="color:rgba(71,85,105,.95);margin-top:0">
-            Preferir, me chama no WhatsApp com: <b>nome + cidade + número de lojas + volume de etiquetas/dia</b>.
+          <p style="color:var(--muted);margin-top:0">
+            Se preferir, me chama no WhatsApp com: <b>nome + cidade + número de lojas + volume de etiquetas/dia</b>.
           </p>
           <div style="height:8px"></div>
-          <p style="color:rgba(71,85,105,.95);margin:0">
+          <p style="color:var(--muted);margin:0">
             Exemplo: “Marlon — RJ — 3 lojas — 250 etiquetas/dia — quero o Completo”.
           </p>
         </div>
@@ -306,28 +310,26 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container" style="display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between;">
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;justify-content:space-between;">
       <div style="max-width:48ch;">
-        <div class="brand" style="margin-bottom:10px;">
+        <div class="brand" style="margin-bottom:12px;">
           <span class="dot" aria-hidden="true"></span>
           <span>Validar <b>Food</b></span>
         </div>
-        <p style="margin:0;color:rgba(71,85,105,.95)">
+        <p style="margin:0;color:var(--muted);font-size:14px;">
           Plataforma de operação e gestão para food service. Etiquetas, estoque e automações que padronizam sua rotina.
         </p>
         <div style="height:12px"></div>
-        <p style="margin:0;color:rgba(71,85,105,.95)">
-          <a href="mailto:validarfood@gmail.com"><b>validarfood@gmail.com</b></a> ·
-          <a href="https://wa.me/552126516226" target="_blank" rel="noopener"><b>WhatsApp</b></a>
+        <p style="margin:0;color:var(--text);font-size:14px;">
+          <a href="mailto:validarfood@gmail.com"><b>validarfood@gmail.com</b></a>
         </p>
       </div>
 
-      <div style="display:flex;gap:46px;flex-wrap:wrap;">
+      <div style="display:flex;gap:40px;flex-wrap:wrap;">
         <div>
-          <div style="font-weight:900;margin-bottom:10px;">Produto</div>
-          <div style="display:flex;flex-direction:column;gap:8px;color:rgba(71,85,105,.95)">
+          <div style="font-weight:800;margin-bottom:12px;font-size:14px;">Produto</div>
+          <div style="display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:14px;">
             <a href="#solucoes">Soluções</a>
             <a href="#planos">Planos</a>
             <a href="#como">Como funciona</a>
@@ -336,39 +338,27 @@
           </div>
         </div>
         <div>
-          <div style="font-weight:900;margin-bottom:10px;">Empresa</div>
-          <div style="display:flex;flex-direction:column;gap:8px;color:rgba(71,85,105,.95)">
+          <div style="font-weight:800;margin-bottom:12px;font-size:14px;">Empresa</div>
+          <div style="display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:14px;">
             <a href="#contato">Contato</a>
             <a href="#home">Topo</a>
           </div>
         </div>
-        <div>
-          <div style="font-weight:900;margin-bottom:10px;">Legal</div>
-          <div style="display:flex;flex-direction:column;gap:8px;color:rgba(71,85,105,.95)">
-            <a href="#contato">Política de Privacidade</a>
-            <a href="#contato">LGPD</a>
-          </div>
-        </div>
       </div>
 
-      <div style="width:100%;border-top:1px solid rgba(15,23,42,.08);padding-top:14px;margin-top:10px;color:rgba(71,85,105,.85);font-size:13px">
+      <div style="width:100%;border-top:1px solid var(--border);padding-top:18px;margin-top:20px;color:var(--muted);font-size:13px">
         © <span id="year"></span> Validar Food. Todos os direitos reservados.
       </div>
     </div>
   </footer>
 
-  <!-- WHATS FLOAT -->
-  <button class="whats-float" aria-label="Abrir WhatsApp" onclick="window.open('https://wa.me/552126516226','_blank')">
-    <!-- ícone simples -->
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <button class="whats-float" id="btnWhatsFloat" aria-label="Abrir WhatsApp" onclick="window.open('https://wa.me/552126516226','_blank')">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M20.5 11.9c0 4.7-3.8 8.6-8.6 8.6-1.5 0-2.9-.4-4.1-1L3.5 20.5l1-4.1c-.6-1.2-1-2.6-1-4.1 0-4.7 3.8-8.6 8.6-8.6 4.7 0 8.4 3.8 8.4 8.2z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M9.2 9.2c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.3l.7 1.6c.1.2.1.5-.1.7l-.4.4c-.1.1-.1.3 0 .4.4.7 1.3 1.6 2.2 2 .1.1.3 0 .4-.1l.5-.5c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5v.5c0 .2 0 .4-.4.6-.4.2-1.3.4-2.3.1-1-.3-2.2-1-3.2-2-1-1-1.7-2.2-2-3.2-.3-1 .-1.9.2-2.3z" fill="white"/>
     </svg>
   </button>
 
   <script src="/assets/script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
