@@ -82,7 +82,7 @@ a:hover { color: var(--primaryDark); }
 }
 
 .logo-img {
-  height: 55px; /* Tamanho grande para desktop */
+  height: 160px; /* Tamanho grande para desktop */
   width: auto;  
   display: block;
   object-fit: contain;
@@ -448,3 +448,4 @@ a:hover { color: var(--primaryDark); }
       bottom: 10px;
   }
 }
+
