@@ -74,18 +74,25 @@ a:hover { color: var(--primaryDark); }
   gap: 16px;
 }
 
-/* --- LOGO (ATUALIZADO) --- */
+/* --- LOGO (ATUALIZADO PARA FICAR MAIOR) --- */
 .brand {
   display: flex;
   align-items: center;
-  padding: 5px 0;
+  padding: 0; /* Removi o padding extra para caber a logo maior */
 }
 
 /* Controle do tamanho da imagem da logo */
 .logo-img {
-  height: 40px; /* Altura ideal para desktop */
-  width: auto;  /* Largura automática para não distorcer */
+  height: 55px; /* Aumentei de 40px para 55px */
+  width: auto;  
   display: block;
+  object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 980px) {
+  /* No celular, mantemos um pouco menor para não quebrar o menu */
+  .logo-img { height: 42px; }
 }
 
 .menu {
@@ -429,3 +436,4 @@ a:hover { color: var(--primaryDark); }
   /* Diminui um pouco a logo no celular */
   .logo-img { height: 32px; }
 }
+
