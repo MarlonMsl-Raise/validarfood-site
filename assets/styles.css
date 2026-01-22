@@ -74,25 +74,18 @@ a:hover { color: var(--primaryDark); }
   gap: 16px;
 }
 
-/* --- LOGO (ATUALIZADO PARA FICAR MAIOR) --- */
+/* --- LOGO GRANDE (55px) --- */
 .brand {
   display: flex;
   align-items: center;
-  padding: 0; /* Removi o padding extra para caber a logo maior */
+  padding: 0; 
 }
 
-/* Controle do tamanho da imagem da logo */
 .logo-img {
-  height: 160px; /* Aumentei de 40px para 55px */
+  height: 55px; /* Tamanho grande para desktop */
   width: auto;  
   display: block;
-  object-fit: contain; /* Garante que a imagem não distorça */
-}
-
-/* Ajuste para Mobile */
-@media (max-width: 980px) {
-  /* No celular, mantemos um pouco menor para não quebrar o menu */
-  .logo-img { height: 42px; }
+  object-fit: contain;
 }
 
 .menu {
@@ -230,39 +223,52 @@ a:hover { color: var(--primaryDark); }
   transform: rotate(45deg);
 }
 
+/* --- HERO CARD COM PRINT (DASHBOARD) --- */
 .hero-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius2);
-  padding: 12px;
+  padding: 8px; /* Borda fina branca */
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
+  position: relative;
 }
 .hero-card:hover { transform: translateY(-5px); }
 
-.hero-card .image {
-  width: 100%;
-  height: 320px;
-  border-radius: 16px;
-  background: radial-gradient(circle at 50% 50%, rgba(245,158,11,0.15), transparent 70%), #f8fafc;
-  border: 1px solid rgba(0,0,0,0.03);
+.image-container {
   position: relative;
+  width: 100%;
+  border-radius: 18px;
   overflow: hidden;
+  line-height: 0;
+  background: #f1f5f9;
 }
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .hero-card .float {
   position: absolute;
-  left: 20px; bottom: 20px;
+  left: -20px;
+  bottom: 30px;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 12px 16px;
-  box-shadow: var(--shadowSoft);
-  backdrop-filter: blur(4px);
+  padding: 12px 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(5px);
+  z-index: 2;
 }
+.hero-card .float b { display: block; color: var(--text); font-size: 14px; }
+.hero-card .float small { color: var(--primaryDark); font-weight: 700; font-size: 12px; }
 
 /* --- SECTIONS --- */
 .section {
-  padding: 90px 0; /* Mais respiro */
+  padding: 90px 0;
 }
 .section h2 {
   margin: 0 0 12px;
@@ -433,9 +439,12 @@ a:hover { color: var(--primaryDark); }
   /* Ajuste no card do menu mobile */
   .mobile-nav-overlay { top: 80px; height: calc(100vh - 80px); }
   
-  /* Diminui um pouco a logo no celular */
-  .logo-img { height: 32px; }
+  /* Diminui a logo no celular pra caber na barra */
+  .logo-img { height: 42px; }
+
+  /* Ajuste do card flutuante do dashboard no mobile */
+  .hero-card .float {
+      left: 10px;
+      bottom: 10px;
+  }
 }
-
-
-
