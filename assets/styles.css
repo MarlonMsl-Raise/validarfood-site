@@ -74,22 +74,19 @@ a:hover { color: var(--primaryDark); }
   gap: 16px;
 }
 
+/* --- LOGO (ATUALIZADO) --- */
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  color: var(--text);
+  padding: 5px 0;
 }
-.brand .dot {
-  width: 32px; height: 32px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), var(--primary2));
-  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+
+/* Controle do tamanho da imagem da logo */
+.logo-img {
+  height: 40px; /* Altura ideal para desktop */
+  width: auto;  /* Largura automática para não distorcer */
+  display: block;
 }
-.brand span b { color: var(--primaryDark); }
 
 .menu {
   display: flex;
@@ -428,4 +425,7 @@ a:hover { color: var(--primaryDark); }
   
   /* Ajuste no card do menu mobile */
   .mobile-nav-overlay { top: 80px; height: calc(100vh - 80px); }
+  
+  /* Diminui um pouco a logo no celular */
+  .logo-img { height: 32px; }
 }
