@@ -1,5 +1,5 @@
 /* =========================
-   Validar Food - Professional Theme V5 Final (Live Label)
+   Validar Food - Professional Theme V6 (TCHAN na Etiqueta)
    ========================= */
 
 :root {
@@ -203,62 +203,64 @@ a:hover { color: var(--primaryDark); }
 .comparison-list { padding-left: 20px; margin: 10px 0 0; color: var(--muted); }
 .comparison-list li { margin-bottom: 8px; }
 
-/* --- ANATOMIA DA ETIQUETA (LIVE LABEL) --- */
-.anatomy-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.label-wrapper {
-  background: #f1f5f9;
-  padding: 30px;
-  border-radius: 30px;
+/* --- ETIQUETA SHOWCASE (O TCHAN!) --- */
+.label-showcase {
   display: flex;
   justify-content: center;
+  padding: 20px;
+  perspective: 1000px; /* Prepara o ambiente 3D */
 }
 
-.live-label {
-  background: #fff;
-  width: 100%;
-  max-width: 420px;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  font-family: 'Courier New', Courier, monospace; 
-  color: #000;
-  border: 1px solid #e2e8f0;
+.label-card-3d {
   position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 12px;
+  /* Uma sombra inicial elegante */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden; /* Mantém o brilho dentro da borda */
 }
 
-.label-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-.label-brand-box {
-  background: #ffd700; color: #000; font-weight: 900;
-  padding: 5px 10px; border-radius: 4px; font-family: var(--font);
-  text-transform: uppercase;
-}
-.label-product {
-  margin: 0; font-size: 22px; font-weight: 900; line-height: 1.1;
-  text-transform: uppercase; font-family: var(--font);
+/* A Imagem */
+.showcase-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 
-.label-row { display: flex; justify-content: space-between; font-size: 18px; margin-bottom: 10px; }
-.label-row.bold { font-weight: 700; }
-.label-divider { height: 2px; background: #000; margin: 15px 0; }
-.label-line { margin-bottom: 6px; font-size: 15px; }
-.label-footer { display: flex; justify-content: space-between; align-items: flex-end; }
-.label-qr svg { width: 80px; height: 80px; color: #000; }
-
-.detail-item { display: flex; gap: 16px; margin-bottom: 24px; }
-.detail-icon {
-  width: 40px; height: 40px; background: rgba(245, 158, 11, 0.15);
-  color: var(--primaryDark); border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; flex-shrink: 0;
+/* Efeito ao passar o mouse (Hover) */
+.label-card-3d:hover {
+  /* Levanta e aumenta um pouquinho */
+  transform: translateY(-10px) scale(1.02);
+  /* Sombra aumenta para dar profundidade */
+  box-shadow: 0 30px 60px rgba(245, 158, 11, 0.25), 0 10px 20px rgba(0,0,0,0.1);
 }
-.detail-item h4 { margin: 0 0 4px; font-size: 18px; color: var(--text); }
-.detail-item p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+
+/* O Brilho (Shine Effect) */
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+/* Brilho passa quando passa o mouse */
+.label-card-3d:hover .shine-effect {
+  left: 150%; /* Move o brilho da esquerda para a direita */
+  transition: 0.7s ease-in-out;
+}
 
 /* PRICING & FOOTER */
 .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
@@ -302,10 +304,9 @@ a:hover { color: var(--primaryDark); }
 @media (max-width: 980px) {
   .menu, .nav-cta { display: none; }
   .btn-mobile-toggle { display: block; }
-  .hero-grid, .grid-2, .pricing, .stats-grid, .anatomy-grid { grid-template-columns: 1fr; }
+  .hero-grid, .grid-2, .pricing, .stats-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 40px; text-align: left; }
   .hero-card { order: -1; margin-bottom: 40px; }
   .logo-img { height: 42px; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .label-wrapper { padding: 20px; }
 }
