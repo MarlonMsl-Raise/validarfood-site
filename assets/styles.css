@@ -299,7 +299,7 @@ a:hover { color: var(--primaryDark); }
 .footer-logo {
   filter: brightness(0) invert(1); /* Inverte a cor para branco */
   height: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
   opacity: 0.9;
 }
 
@@ -417,4 +417,5 @@ a:hover { color: var(--primaryDark); }
     text-align: center;
   }
 }
+
 
