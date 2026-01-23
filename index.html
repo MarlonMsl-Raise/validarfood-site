@@ -162,26 +162,76 @@
     </div>
   </section>
 
-  <section class="section" id="etiquetas" style="background: #fff; position: relative; overflow: hidden;">
-    <div style="position:absolute; width:100%; height:100%; top:0; left:0; background: radial-gradient(circle at 50% 50%, rgba(245,158,11,0.08) 0%, transparent 70%); pointer-events:none;"></div>
-    
-    <div class="container" style="position:relative; z-index:2;">
+  <section class="section" id="etiquetas" style="background: #fff;">
+    <div class="container">
       <div style="text-align:center; margin-bottom: 50px;">
         <h2>Tecnologia em cada detalhe</h2>
-        <p class="sub" style="margin: 0 auto;">Passe o mouse para ver a anatomia de uma etiqueta inteligente.</p>
+        <p class="sub" style="margin: 0 auto;">Passe o mouse sobre a etiqueta para entender a inteligência por trás dela.</p>
       </div>
-      
-      <div class="label-showcase">
-        <div class="label-card-3d">
-          <img src="/assets/etiqueta5.png" alt="Anatomia da Etiqueta Validar Food" class="showcase-img">
-          <div class="shine-effect"></div>
+
+      <div class="interactive-container">
+        
+        <div class="image-wrapper">
+          <div class="label-frame">
+            <img src="/assets/etiqueta6.png" alt="Etiqueta Validar Food" class="interactive-img">
+            
+            <div class="hotspot" data-target="info-logo" style="top: 5%; left: 5%; width: 90%; height: 18%;"></div>
+            <div class="hotspot" data-target="info-prod" style="top: 25%; left: 5%; width: 90%; height: 10%;"></div>
+            <div class="hotspot" data-target="info-data" style="top: 36%; left: 5%; width: 90%; height: 18%;"></div>
+            <div class="hotspot" data-target="info-sku" style="top: 55%; left: 5%; width: 90%; height: 15%;"></div>
+            <div class="hotspot" data-target="info-resp" style="top: 72%; left: 5%; width: 60%; height: 20%;"></div>
+            <div class="hotspot" data-target="info-qr" style="top: 72%; left: 68%; width: 27%; height: 23%;"></div>
+          </div>
+        </div>
+
+        <div class="info-list">
+          <div class="info-item" id="info-logo">
+            <div class="info-icon">🏷️</div>
+            <div>
+              <h4>Identificação Visual</h4>
+              <p>Sua marca em destaque e nome do produto legível para agilizar a operação.</p>
+            </div>
+          </div>
+          <div class="info-item" id="info-prod">
+            <div class="info-icon">⚖️</div>
+            <div>
+              <h4>Controle de Estoque</h4>
+              <p>Condição de armazenamento e quantidade exata na embalagem.</p>
+            </div>
+          </div>
+          <div class="info-item" id="info-data">
+            <div class="info-icon">📅</div>
+            <div>
+              <h4>Cálculo Automático</h4>
+              <p>Datas de produção e validade calculadas sozinhas baseadas na ficha técnica.</p>
+            </div>
+          </div>
+          <div class="info-item" id="info-sku">
+            <div class="info-icon">🔢</div>
+            <div>
+              <h4>Padronização</h4>
+              <p>Códigos internos (SKU), tipo de material e unidade de medida padronizados.</p>
+            </div>
+          </div>
+          <div class="info-item" id="info-resp">
+            <div class="info-icon">👨‍🍳</div>
+            <div>
+              <h4>Responsabilidade</h4>
+              <p>Registro exato de <b>quem</b> produziu, o lote e os dados fiscais.</p>
+            </div>
+          </div>
+          <div class="info-item" id="info-qr">
+            <div class="info-icon">📱</div>
+            <div>
+              <h4>Conexão Digital (QR Code)</h4>
+              <p>Aponte o celular ou coletor para ver todo o histórico e rastreabilidade deste item.</p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div style="text-align:center; margin-top: 40px;">
-        <div style="display:inline-flex; align-items:center; gap:8px; background:#f1f5f9; padding:8px 16px; border-radius:20px; font-size:14px; color:var(--muted); border:1px solid rgba(0,0,0,0.05);">
-          <span>🖨️</span> Compatível com Zebra, Elgin e impressoras térmicas
-        </div>
+        <p style="font-size:14px; color:var(--muted);">* Compatível com impressoras térmicas (Zebra, Elgin, etc).</p>
       </div>
     </div>
   </section>
