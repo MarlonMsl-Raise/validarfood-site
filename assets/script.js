@@ -57,7 +57,52 @@
     });
   }
 
-  // Inicializa
+  // --- INTERAÇÃO DA ETIQUETA ---
+  function setupLabelInteraction() {
+    const hotspots = document.querySelectorAll('.hotspot');
+    const infoItems = document.querySelectorAll('.info-item');
+
+    // Função para ativar o par (Hotspot + Texto)
+    function activatePair(id) {
+      // Remove ativos anteriores
+      hotspots.forEach(el => el.classList.remove('active'));
+      infoItems.forEach(el => el.classList.remove('active'));
+
+      // Ativa o hotspot correspondente
+      const targetHotspot = document.querySelector(`.hotspot[data-target="${id}"]`);
+      if (targetHotspot) targetHotspot.classList.add('active');
+
+      // Ativa o item de texto correspondente
+      const targetItem = document.getElementById(id);
+      if (targetItem) targetItem.classList.add('active');
+    }
+
+    // Função para limpar tudo
+    function clearAll() {
+      hotspots.forEach(el => el.classList.remove('active'));
+      infoItems.forEach(el => el.classList.remove('active'));
+    }
+
+    // Eventos nos Hotspots (Imagem)
+    hotspots.forEach(spot => {
+      spot.addEventListener('mouseenter', () => {
+        const targetId = spot.getAttribute('data-target');
+        activatePair(targetId);
+      });
+      spot.addEventListener('mouseleave', clearAll);
+    });
+
+    // Eventos na Lista (Texto) - Bidirecional
+    infoItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        activatePair(item.id);
+      });
+      item.addEventListener('mouseleave', clearAll);
+    });
+  }
+
+  // Inicializa tudo
   setWhatsLinks();
   setupMobileMenu();
+  setupLabelInteraction();
 })();
