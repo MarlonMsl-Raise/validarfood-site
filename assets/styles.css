@@ -1,5 +1,5 @@
 /* =========================
-   Validar Food - Professional Theme V6 (TCHAN na Etiqueta)
+   Validar Food - Professional Theme V7 Final (Interactive)
    ========================= */
 
 :root {
@@ -196,70 +196,71 @@ a:hover { color: var(--primaryDark); }
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(245, 158, 11, 0.3); }
 
-/* Cards Comparativos */
 .problem-card { border-left: 4px solid #ef4444; }
 .solution-card { border-left: 4px solid #22c55e; background: #f0fdf4; border-color: #22c55e; }
 .card-icon { font-size: 32px; margin-bottom: 12px; }
 .comparison-list { padding-left: 20px; margin: 10px 0 0; color: var(--muted); }
 .comparison-list li { margin-bottom: 8px; }
 
-/* --- ETIQUETA SHOWCASE (O TCHAN!) --- */
-.label-showcase {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  perspective: 1000px; /* Prepara o ambiente 3D */
+/* --- INTERACTIVE LABEL (HOTSPOTS) --- */
+.interactive-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.label-card-3d {
+.image-wrapper { display: flex; justify-content: center; }
+
+.label-frame {
   position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border-radius: 12px;
-  /* Uma sombra inicial elegante */
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
-  cursor: pointer;
+  width: 100%;
+  max-width: 450px;
   background: #fff;
-  overflow: hidden; /* Mantém o brilho dentro da borda */
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
 }
 
-/* A Imagem */
-.showcase-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
+.interactive-img { width: 100%; height: auto; display: block; }
+
+.hotspot {
+  position: absolute; cursor: pointer;
+  border: 2px solid transparent; border-radius: 8px;
+  transition: all 0.3s ease; z-index: 10;
+}
+.hotspot.active, .hotspot:hover {
+  border-color: var(--primary);
+  background: rgba(245, 158, 11, 0.15);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
 }
 
-/* Efeito ao passar o mouse (Hover) */
-.label-card-3d:hover {
-  /* Levanta e aumenta um pouquinho */
-  transform: translateY(-10px) scale(1.02);
-  /* Sombra aumenta para dar profundidade */
-  box-shadow: 0 30px 60px rgba(245, 158, 11, 0.25), 0 10px 20px rgba(0,0,0,0.1);
+.info-list { display: flex; flex-direction: column; gap: 12px; }
+
+.info-item {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 16px; border-radius: 12px;
+  border: 1px solid transparent; transition: all 0.3s ease;
+  cursor: default;
 }
 
-/* O Brilho (Shine Effect) */
-.shine-effect {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-25deg);
-  transition: 0.5s;
-  pointer-events: none;
+.info-icon {
+  font-size: 24px; background: #f1f5f9; width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px; transition: 0.3s;
 }
 
-/* Brilho passa quando passa o mouse */
-.label-card-3d:hover .shine-effect {
-  left: 150%; /* Move o brilho da esquerda para a direita */
-  transition: 0.7s ease-in-out;
+.info-item h4 { margin: 0 0 4px; font-size: 16px; color: var(--text); }
+.info-item p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+.info-item.active, .info-item:hover {
+  background: #fff; border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transform: translateX(10px);
+}
+.info-item.active .info-icon, .info-item:hover .info-icon {
+  background: var(--primary); color: #fff;
 }
 
 /* PRICING & FOOTER */
@@ -304,9 +305,10 @@ a:hover { color: var(--primaryDark); }
 @media (max-width: 980px) {
   .menu, .nav-cta { display: none; }
   .btn-mobile-toggle { display: block; }
-  .hero-grid, .grid-2, .pricing, .stats-grid { grid-template-columns: 1fr; }
+  .hero-grid, .grid-2, .pricing, .stats-grid, .interactive-container { grid-template-columns: 1fr; }
   .hero { padding-top: 40px; text-align: left; }
   .hero-card { order: -1; margin-bottom: 40px; }
   .logo-img { height: 42px; }
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hotspot { border-color: rgba(0,0,0,0.05); } /* Visual no mobile */
 }
