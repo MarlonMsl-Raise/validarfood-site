@@ -125,7 +125,6 @@
     <div class="marquee-container">
       <div class="marquee-content">
         <img src="/assets/cliente1.png" alt="Cliente"><img src="/assets/cliente2.png" alt="Cliente"><img src="/assets/cliente3.png" alt="Cliente"><img src="/assets/cliente4.png" alt="Cliente"><img src="/assets/cliente5.png" alt="Cliente"><img src="/assets/cliente6.png" alt="Cliente"><img src="/assets/cliente7.png" alt="Cliente"><img src="/assets/cliente8.png" alt="Cliente"><img src="/assets/cliente9.png" alt="Cliente"><img src="/assets/cliente10.png" alt="Cliente"><img src="/assets/cliente11.png" alt="Cliente"><img src="/assets/cliente12.png" alt="Cliente"><img src="/assets/cliente13.png" alt="Cliente"><img src="/assets/cliente14.png" alt="Cliente"><img src="/assets/cliente15.png" alt="Cliente"><img src="/assets/cliente16.png" alt="Cliente"><img src="/assets/cliente17.png" alt="Cliente">
-        
         <img src="/assets/cliente1.png" alt="Cliente"><img src="/assets/cliente2.png" alt="Cliente"><img src="/assets/cliente3.png" alt="Cliente"><img src="/assets/cliente4.png" alt="Cliente"><img src="/assets/cliente5.png" alt="Cliente"><img src="/assets/cliente6.png" alt="Cliente"><img src="/assets/cliente7.png" alt="Cliente"><img src="/assets/cliente8.png" alt="Cliente"><img src="/assets/cliente9.png" alt="Cliente"><img src="/assets/cliente10.png" alt="Cliente"><img src="/assets/cliente11.png" alt="Cliente"><img src="/assets/cliente12.png" alt="Cliente"><img src="/assets/cliente13.png" alt="Cliente"><img src="/assets/cliente14.png" alt="Cliente"><img src="/assets/cliente15.png" alt="Cliente"><img src="/assets/cliente16.png" alt="Cliente"><img src="/assets/cliente17.png" alt="Cliente">
       </div>
     </div>
@@ -163,84 +162,25 @@
     </div>
   </section>
 
-  <section class="section" id="etiquetas" style="background: #fff;">
-    <div class="container">
+  <section class="section" id="etiquetas" style="background: #fff; position: relative; overflow: hidden;">
+    <div style="position:absolute; width:100%; height:100%; top:0; left:0; background: radial-gradient(circle at 50% 50%, rgba(245,158,11,0.08) 0%, transparent 70%); pointer-events:none;"></div>
+    
+    <div class="container" style="position:relative; z-index:2;">
       <div style="text-align:center; margin-bottom: 50px;">
-        <h2>Muito mais que um papel</h2>
-        <p class="sub" style="margin: 0 auto;">Entenda a tecnologia por trás de cada etiqueta gerada pela Validar Food.</p>
+        <h2>Tecnologia em cada detalhe</h2>
+        <p class="sub" style="margin: 0 auto;">Passe o mouse para ver a anatomia de uma etiqueta inteligente.</p>
       </div>
       
-      <div class="anatomy-grid">
-        
-        <div class="label-wrapper">
-          <div class="live-label">
-            <div class="label-header">
-              <div class="label-brand-box">Orly</div> 
-              <h3 class="label-product">CREME DE CHEDDAR</h3>
-            </div>
-            
-            <div class="label-row bold">
-              <span>Resfriado</span>
-              <span>1000 g</span>
-            </div>
-            <div class="label-divider"></div>
-
-            <div class="label-data">
-              <div class="label-line"><strong>Data da Produção:</strong> 22/01/2026</div>
-              <div class="label-line"><strong>Vencimento:</strong> 06/02/2026</div>
-              <div class="label-line"><strong>Código:</strong> 5911</div>
-              <div class="label-line"><strong>Tipo de Material:</strong> Insumo Produzido</div>
-              <div class="label-line"><strong>Unidade de Medida:</strong> Grama</div>
-            </div>
-            
-            <div class="label-divider"></div>
-
-            <div class="label-footer">
-              <div class="label-info">
-                <div><strong>Resp.:</strong> Marlon Messias</div>
-                <div style="font-size:12px; margin-top:4px;">#c57a9d07</div>
-                <div style="font-weight:700; margin-top:4px;">ORLY BURGUER</div>
-                <div style="font-size:11px;">42.146.899/0001-03</div>
-              </div>
-              <div class="label-qr">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h6v6H3z"/><path d="M15 3h6v6h-6z"/><path d="M3 15h6v6H3z"/><path d="M14 15h2v2h-2z"/><path d="M17 18h2v2h-2z"/><path d="M20 15h1v1h-1z"/></svg>
-              </div>
-            </div>
-          </div>
+      <div class="label-showcase">
+        <div class="label-card-3d">
+          <img src="/assets/etiqueta5.png" alt="Anatomia da Etiqueta Validar Food" class="showcase-img">
+          <div class="shine-effect"></div>
         </div>
+      </div>
 
-        <div class="anatomy-details">
-          <div class="detail-item">
-            <div class="detail-icon">📅</div>
-            <div>
-              <h4>Cálculo Automático</h4>
-              <p>A data de validade é calculada sozinha baseada na ficha técnica. Adeus erro humano.</p>
-            </div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-icon">👤</div>
-            <div>
-              <h4>Responsabilidade</h4>
-              <p>Sabemos exatamente <b>quem</b> produziu (Marlon Messias), quando e onde.</p>
-            </div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-icon">🔍</div>
-            <div>
-              <h4>Rastreabilidade Total</h4>
-              <p>O <b>QR Code</b> carrega o histórico desse lote. Um clique e você sabe tudo sobre o produto.</p>
-            </div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-icon">🔢</div>
-            <div>
-              <h4>Padronização</h4>
-              <p>Nome correto, unidade de medida e tipo de material. Sua operação fala a mesma língua.</p>
-            </div>
-          </div>
-          <div style="margin-top:30px;">
-            <p style="font-size:14px; color:var(--muted); margin-bottom:10px;">* Compatível com impressoras térmicas (Zebra, Elgin, etc).</p>
-          </div>
+      <div style="text-align:center; margin-top: 40px;">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:#f1f5f9; padding:8px 16px; border-radius:20px; font-size:14px; color:var(--muted); border:1px solid rgba(0,0,0,0.05);">
+          <span>🖨️</span> Compatível com Zebra, Elgin e impressoras térmicas
         </div>
       </div>
     </div>
