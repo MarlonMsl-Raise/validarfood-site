@@ -4,33 +4,44 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Validar Food | Plataforma para Food Service</title>
-  <meta name="description" content="Controle de validade, estoque e etiquetas com QR Code. Mais padrão e menos desperdício."/>
+  <meta name="description" content="Etiquetas inteligentes, controle de validade e gestão de estoque para food service. Reduza perdas, padronize sua operação e atenda à ANVISA."/>
   <meta name="theme-color" content="#f59e0b"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Validar Food | Plataforma para Food Service"/>
+  <meta property="og:description" content="Etiquetas, validade e estoque que padronizam sua rotina e reduzem perdas."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.validarfood.com.br/"/>
+  <meta property="og:image" content="https://www.validarfood.com.br/assets/dashboard.png"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body>
 
+  <!-- ============ HEADER ============ -->
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Validar Food">
         <img src="/assets/logo.png" alt="Validar Food" class="logo-img">
       </a>
 
-      <nav class="menu" aria-label="Navegação Desktop">
-        <a href="#solucoes">Soluções</a>
-        <a href="#clientes">Quem usa</a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#como">Como funciona</a>
         <a href="#etiquetas">Etiquetas</a>
-        <a href="#planos">Planos</a>
-        <a href="#contato">Contato</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <div class="nav-cta">
-        <a class="btn" href="https://wa.me/552126516226" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" href="https://wa.me/552126516226" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.4.1-.2 0-.4 0-.5L9.6 7.6c-.2-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.4.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.1-.5-.2zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          WhatsApp
+        </a>
         <a class="btn btn-primary" href="#contato">Agendar demonstração</a>
       </div>
 
@@ -41,20 +52,25 @@
   </header>
 
   <div class="mobile-nav-overlay" id="mobileNav">
-    <a href="#solucoes">Soluções</a>
-    <a href="#clientes">Quem usa</a>
+    <a href="#como">Como funciona</a>
     <a href="#etiquetas">Etiquetas</a>
-    <a href="#planos">Planos</a>
-    <a href="#contato">Contato</a>
-    <div style="margin-top:20px; display:flex; flex-direction:column; gap:10px">
-        <a href="https://wa.me/552126516226" target="_blank" class="btn btn-primary" style="justify-content:center; color:white;">Falar no WhatsApp</a>
+    <a href="#modulos">Módulos</a>
+    <a href="#clientes">Clientes</a>
+    <a href="#faq">FAQ</a>
+    <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px">
+      <a href="https://wa.me/552126516226" target="_blank" class="btn btn-primary" style="justify-content:center;">Falar no WhatsApp</a>
+      <a href="#contato" class="btn">Agendar demonstração</a>
     </div>
   </div>
 
+  <!-- ============ HERO ============ -->
   <main id="home" class="hero">
     <div class="container hero-grid">
-      <div>
-        <div class="badge">Plataforma para Food Service</div>
+      <div class="hero-text">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Plataforma para Food Service
+        </div>
         <h1 class="h1">
           Operação de verdade, com
           <span class="accent">rastreabilidade</span>
@@ -62,13 +78,16 @@
         </h1>
 
         <p class="lead">
-          Etiquetas, validade, estoque e automações que padronizam sua rotina e reduzem perdas —
-          do recebimento à produção.
+          Etiquetas, validade, estoque e automações que padronizam sua rotina
+          e reduzem perdas — do recebimento à produção.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contato">Agendar demonstração</a>
-          <a class="btn" href="https://wa.me/552126516226" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="btn btn-primary btn-lg" href="#contato">
+            Agendar demonstração
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="btn btn-lg" href="https://wa.me/552126516226" target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
 
         <div class="checklist">
@@ -78,21 +97,42 @@
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="image-container">
-          <img src="/assets/dashboard.png" 
-               alt="Dashboard do Sistema Validar Food" 
-               class="hero-img">
-          
-          <div class="float">
-            <b>Visão total da operação</b>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="image-container">
+            <img src="/assets/dashboard.png" alt="Dashboard do Sistema Validar Food" class="hero-img">
+          </div>
+        </div>
+
+        <div class="float float-tl">
+          <div class="float-icon">📊</div>
+          <div>
+            <b>Visão total</b>
+            <small>Operação em tempo real</small>
+          </div>
+        </div>
+
+        <div class="float float-br">
+          <div class="float-icon">⏰</div>
+          <div>
+            <b>Alertas automáticos</b>
+            <small>Vencimento sob controle</small>
+          </div>
+        </div>
+
+        <div class="float float-bl">
+          <div class="float-icon">📱</div>
+          <div>
+            <b>QR rastreável</b>
+            <small>Histórico de cada item</small>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <section class="section stats-section">
+  <!-- ============ STATS ============ -->
+  <section class="stats-section">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
@@ -109,18 +149,21 @@
         </div>
         <div class="stat-item">
           <span class="stat-number">100%</span>
-          <span class="stat-label">Segurança ANVISA</span>
+          <span class="stat-label">Conforme ANVISA</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="clientes" style="background-color: #fff; padding: 60px 0; overflow:hidden;">
+  <!-- ============ CLIENTES (MARQUEE) ============ -->
+  <section class="section section-clients" id="clientes">
     <div class="container">
-      <h2 style="text-align:center;">Quem confia na Validar Food</h2>
-      <p class="sub" style="text-align:center; margin: 0 auto 40px;">Grandes operações que padronizaram seus processos com a gente.</p>
+      <div class="section-head center">
+        <span class="eyebrow">Quem confia</span>
+        <h2>Operações que padronizaram com a gente</h2>
+      </div>
     </div>
-    
+
     <div class="marquee-container">
       <div class="marquee-content">
         <img src="/assets/cliente1.png" alt="Cliente"><img src="/assets/cliente2.png" alt="Cliente"><img src="/assets/cliente3.png" alt="Cliente"><img src="/assets/cliente4.png" alt="Cliente"><img src="/assets/cliente5.png" alt="Cliente"><img src="/assets/cliente6.png" alt="Cliente"><img src="/assets/cliente7.png" alt="Cliente"><img src="/assets/cliente8.png" alt="Cliente"><img src="/assets/cliente9.png" alt="Cliente"><img src="/assets/cliente10.png" alt="Cliente"><img src="/assets/cliente11.png" alt="Cliente"><img src="/assets/cliente12.png" alt="Cliente"><img src="/assets/cliente13.png" alt="Cliente"><img src="/assets/cliente14.png" alt="Cliente"><img src="/assets/cliente15.png" alt="Cliente"><img src="/assets/cliente16.png" alt="Cliente"><img src="/assets/cliente17.png" alt="Cliente">
@@ -129,57 +172,68 @@
     </div>
   </section>
 
-  <section class="section" id="solucoes" style="background-color: #f8fafc;">
+  <!-- ============ COMO FUNCIONA ============ -->
+  <section class="section section-how" id="como">
     <div class="container">
-      <div style="text-align:center; margin-bottom: 40px;">
-        <h2>Da dor para o controle</h2>
-        <p class="sub" style="margin: 0 auto;">Transforme problemas do dia a dia em processos padronizados.</p>
+      <div class="section-head center">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Da teoria à prática em 3 passos</h2>
+        <p class="sub">Implantação rápida e fluxo simples — sua equipe entende em minutos.</p>
       </div>
 
-      <div class="grid-2">
-        <div class="card problem-card">
-          <div class="card-icon">⚠️</div>
-          <h3>Sem a Validar</h3>
-          <ul class="comparison-list">
-            <li>Perdas frequentes por validade vencida</li>
-            <li>Cadernos e planilhas confusas</li>
-            <li>Risco constante com a fiscalização</li>
-            <li>Impressão lenta e manual</li>
-          </ul>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">📋</div>
+          <h3>Cadastre seus produtos</h3>
+          <p>Insumos, fichas técnicas, prazos de validade e condições de armazenamento. Tudo padronizado uma única vez.</p>
         </div>
-        <div class="card solution-card">
-          <div class="card-icon">✅</div>
-          <h3>Com a Validar Food</h3>
-          <ul class="comparison-list">
-            <li>Alertas automáticos de vencimento</li>
-            <li>Histórico digital e rastreável</li>
-            <li>Segurança total na operação</li>
-            <li>Etiquetas em segundos via QR Code</li>
-          </ul>
+
+        <div class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">🖨️</div>
+          <h3>Imprima em segundos</h3>
+          <p>Com poucos toques, sua equipe gera etiquetas com data, lote, responsável e QR Code direto na impressora térmica.</p>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">📊</div>
+          <h3>Controle e rastreie</h3>
+          <p>Validades, estoque, entradas e saídas em tempo real. Alertas automáticos e relatórios prontos pra fiscalização.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="etiquetas" style="background: #fff;">
+  <!-- ============ ETIQUETA INTERATIVA ============ -->
+  <section class="section section-label" id="etiquetas">
     <div class="container">
-      <div style="text-align:center; margin-bottom: 50px;">
-        <h2>Tecnologia em cada detalhe</h2>
-        <p class="sub" style="margin: 0 auto;">Passe o mouse sobre a etiqueta para entender a inteligência por trás dela.</p>
+      <div class="section-head center">
+        <span class="eyebrow">Tecnologia em cada detalhe</span>
+        <h2>A etiqueta inteligente da Validar Food</h2>
+        <p class="sub">Passe o mouse sobre a etiqueta para entender a inteligência por trás dela.</p>
       </div>
 
       <div class="interactive-container">
-        
         <div class="image-wrapper">
           <div class="label-frame">
             <img src="/assets/etiqueta6.png" alt="Etiqueta Validar Food" class="interactive-img">
-            
-            <div class="hotspot" data-target="info-logo" style="top: 7%; left: 5%; width: 90%; height: 20%;"></div>
-            <div class="hotspot" data-target="info-prod" style="top: 25%; left: 5%; width: 90%; height: 10%;"></div>
-            <div class="hotspot" data-target="info-data" style="top: 36%; left: 5%; width: 90%; height: 12%;"></div>
-            <div class="hotspot" data-target="info-sku" style="top: 48%; left: 5%; width: 90%; height: 19%;"></div>
-            <div class="hotspot" data-target="info-resp" style="top: 69%; left: 5%; width: 60%; height: 24%;"></div>
-            <div class="hotspot" data-target="info-qr" style="top: 72%; left: 68%; width: 27%; height: 23%;"></div>
+
+            <div class="hotspot" data-target="info-logo" style="top: 7%; left: 5%; width: 90%; height: 20%;"><span class="hotspot-pulse"></span></div>
+            <div class="hotspot" data-target="info-prod" style="top: 25%; left: 5%; width: 90%; height: 10%;"><span class="hotspot-pulse"></span></div>
+            <div class="hotspot" data-target="info-data" style="top: 36%; left: 5%; width: 90%; height: 12%;"><span class="hotspot-pulse"></span></div>
+            <div class="hotspot" data-target="info-sku" style="top: 48%; left: 5%; width: 90%; height: 19%;"><span class="hotspot-pulse"></span></div>
+            <div class="hotspot" data-target="info-resp" style="top: 69%; left: 5%; width: 60%; height: 24%;"><span class="hotspot-pulse"></span></div>
+            <div class="hotspot" data-target="info-qr" style="top: 72%; left: 68%; width: 27%; height: 23%;"><span class="hotspot-pulse"></span></div>
           </div>
         </div>
 
@@ -229,99 +283,331 @@
         </div>
       </div>
 
-      <div style="text-align:center; margin-top: 40px;">
-        <p style="font-size:14px; color:var(--muted);">* Compatível com impressoras térmicas (Zebra, Elgin, etc).</p>
+      <div class="printer-note">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Compatível com impressoras térmicas (Zebra, Elgin, Argox e outras)
       </div>
     </div>
   </section>
 
-  <section class="section" id="planos" style="background-color: #f8fafc;">
+  <!-- ============ DOR vs SOLUÇÃO ============ -->
+  <section class="section section-pain" id="solucoes">
     <div class="container">
-      <h2 style="text-align:center;">Escolha o melhor plano</h2>
-      <p class="sub" style="text-align:center; margin: 0 auto 40px;">Flexibilidade para crescer junto com seu negócio.</p>
+      <div class="section-head center">
+        <span class="eyebrow">Da dor para o controle</span>
+        <h2>Transforme problemas em processos padronizados</h2>
+      </div>
 
-      <div class="pricing">
-        <div class="price">
-          <h3>Essencial</h3>
-          <p style="margin:0;color:var(--muted)">Para padronizar a operação</p>
-          <div class="value" style="color:var(--primaryDark)">R$ 219 <span style="font-size:16px; font-weight:500; color:var(--muted)">/mês</span></div>
-          <ul>
-            <li>Etiquetas de validade para Operação</li>
-            <li>Cadastro de materiais</li>
+      <div class="grid-2">
+        <div class="card problem-card">
+          <div class="card-icon">⚠️</div>
+          <h3>Sem a Validar</h3>
+          <ul class="comparison-list">
+            <li>Perdas frequentes por validade vencida</li>
+            <li>Cadernos e planilhas confusas</li>
+            <li>Risco constante com a fiscalização</li>
+            <li>Impressão lenta e manual</li>
+            <li>Sem rastreabilidade dos lotes</li>
+          </ul>
+        </div>
+        <div class="card solution-card">
+          <div class="card-icon">✅</div>
+          <h3>Com a Validar Food</h3>
+          <ul class="comparison-list">
+            <li>Alertas automáticos de vencimento</li>
+            <li>Histórico digital e rastreável</li>
+            <li>Segurança total na operação</li>
+            <li>Etiquetas em segundos via QR Code</li>
+            <li>Conformidade com a RDC 216 da ANVISA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULOS (PLANOS) ============ -->
+  <section class="section section-modules" id="modulos">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Módulos</span>
+        <h2>Escolha o módulo certo pro seu momento</h2>
+        <p class="sub">Comece simples ou vá direto pra gestão completa. Você pode evoluir a qualquer momento.</p>
+      </div>
+
+      <div class="modules-grid">
+
+        <!-- START -->
+        <div class="module-card">
+          <div class="module-head">
+            <span class="module-tag">Entrada</span>
+            <h3>Start</h3>
+            <p class="module-desc">Para padronizar a identificação dos seus produtos.</p>
+          </div>
+          <div class="module-price">
+            <span class="price-currency">R$</span>
+            <span class="price-value">249<span class="price-cents">,90</span></span>
+            <span class="price-period">/mês</span>
+          </div>
+          <ul class="module-features">
+            <li>Etiquetas de validade e identificação do produto</li>
+            <li>Informações preenchidas automaticamente a partir do cadastro de insumos e produtos</li>
             <li>Impressões ilimitadas</li>
-            <li>App criado para utilização do sistema</li>
+            <li>App mobile para a equipe</li>
             <li>Suporte por WhatsApp</li>
             <li>Implantação assistida</li>
           </ul>
-          <div style="height:20px"></div>
-          <a class="btn btn-primary" href="#contato">Quero uma proposta</a>
+          <a class="btn btn-outline btn-block" href="#contato" data-plan="Start">Quero o Start</a>
         </div>
 
-        <div class="price featured">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(251,191,36,.16);border:1px solid rgba(251,191,36,.25);padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px;margin-bottom:14px;color:#fbbf24;">
-            ⭐ Mais escolhido
+        <!-- CONTROL (DESTACADO) -->
+        <div class="module-card module-featured">
+          <div class="module-ribbon">⭐ Mais escolhido</div>
+          <div class="module-head">
+            <span class="module-tag tag-featured">Recomendado</span>
+            <h3>Control</h3>
+            <p class="module-desc">Identificação <b>+ controle ativo</b> da validade.</p>
           </div>
-          <h3 style="color:#fff">Completo</h3>
-          <p style="margin:0;color:rgba(255,255,255,.8)">Gestão total de estoque + automações</p>
-          <div class="value">R$ 329 <span style="font-size:16px;font-weight:500;color:rgba(255,255,255,.6)">/mês</span></div>
-          <ul>
-            <li>Tudo do plano Essencial</li>
-            <li>Gestão completa de estoque</li>
-            <li>Entradas, saídas e inventário</li>
-            <li>Integração de notas fiscais</li>
-            <li>Validade + rastreabilidade avançada</li>
-            <li>Dashboards e relatórios automáticos</li>
+          <div class="module-price">
+            <span class="price-currency">R$</span>
+            <span class="price-value">299<span class="price-cents">,90</span></span>
+            <span class="price-period">/mês</span>
+          </div>
+          <ul class="module-features">
+            <li>Tudo do plano <b>Start</b></li>
+            <li>Etiqueta com <b>controle ativo de validade</b> a partir da emissão</li>
+            <li>Ao usar o produto, basta excluir a etiqueta para encerrar o controle</li>
+            <li>Alertas automáticos de vencimento</li>
             <li>Suporte prioritário</li>
           </ul>
-          <div style="height:20px"></div>
-          <a class="btn btn-primary" href="#contato">Quero uma proposta</a>
+          <a class="btn btn-primary btn-block" href="#contato" data-plan="Control">Quero o Control</a>
+        </div>
+
+        <!-- PRO -->
+        <div class="module-card">
+          <div class="module-head">
+            <span class="module-tag">Premium</span>
+            <h3>Pro</h3>
+            <p class="module-desc">Gestão de estoque <b>completa</b> + rastreabilidade total.</p>
+          </div>
+          <div class="module-price">
+            <span class="price-currency">R$</span>
+            <span class="price-value">349<span class="price-cents">,90</span></span>
+            <span class="price-period">/mês</span>
+          </div>
+          <ul class="module-features">
+            <li>Tudo do plano <b>Control</b></li>
+            <li>Gestão de estoque completa (entrada, retirada, inventário)</li>
+            <li>Avisos de validade e auxílio à lista de compras</li>
+            <li>Etiquetas avulsas e <b>etiquetas com QR Code</b> para retirada de estoque</li>
+            <li>Dashboards e relatórios automáticos</li>
+            <li>Suporte premium</li>
+          </ul>
+          <a class="btn btn-outline btn-block" href="#contato" data-plan="Pro">Quero o Pro</a>
+        </div>
+      </div>
+
+      <!-- TABELA COMPARATIVA -->
+      <div class="compare-wrap">
+        <h3 class="compare-title">Comparativo rápido</h3>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Recurso</th>
+                <th>Start</th>
+                <th class="th-featured">Control</th>
+                <th>Pro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Etiquetas de identificação</td>
+                <td><span class="check-cell">✓</span></td>
+                <td><span class="check-cell">✓</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Cálculo automático de validade</td>
+                <td><span class="check-cell">✓</span></td>
+                <td><span class="check-cell">✓</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Controle ativo de validade pós-emissão</td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="check-cell">✓</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Alertas automáticos de vencimento</td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="check-cell">✓</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Gestão de estoque (entradas e saídas)</td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Inventário e lista de compras</td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Etiquetas com QR Code para retirada</td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+              <tr>
+                <td>Dashboards e relatórios</td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="dash-cell">—</span></td>
+                <td><span class="check-cell">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contato">
-    <div class="container">
-      <h2>Agende uma demonstração</h2>
-      <p class="sub">Veja a Validar Food rodando na prática.</p>
+  <!-- ============ FAQ ============ -->
+  <section class="section section-faq" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head center">
+        <span class="eyebrow">Dúvidas frequentes</span>
+        <h2>Antes de agendar, talvez ajude:</h2>
+      </div>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3>Fale com a gente</h3>
-          <p><b>Email:</b> <a href="mailto:validarfood@gmail.com">validarfood@gmail.com</a></p>
-          <p><b>WhatsApp:</b> <a href="https://wa.me/552126516226" target="_blank" rel="noopener">+55 (21) 2651-6226</a></p>
-          <div style="height:20px"></div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/552126516226" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Funciona com qualquer impressora térmica?</summary>
+          <div class="faq-body">
+            <p>Sim. A Validar Food é compatível com as principais impressoras térmicas do mercado — Zebra, Elgin, Argox e similares. Na implantação a gente garante que sua impressora está configurada corretamente.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Preciso de internet pra imprimir as etiquetas?</summary>
+          <div class="faq-body">
+            <p>Para o cadastro e sincronização sim, mas a impressão acontece de forma rápida via app. Mesmo com oscilações de internet, sua operação não para.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como é a implantação? Quanto tempo demora?</summary>
+          <div class="faq-body">
+            <p>A implantação é assistida pela nossa equipe. Em geral, em poucos dias sua operação está rodando — incluindo cadastro de produtos, configuração de impressoras e treinamento da equipe.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Posso começar no Start e migrar pro Pro depois?</summary>
+          <div class="faq-body">
+            <p>Sim, totalmente. Os módulos foram pensados pra acompanhar a evolução da sua operação. Você pode subir de plano a qualquer momento sem perder dados ou cadastros.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Atende às exigências da ANVISA (RDC 216)?</summary>
+          <div class="faq-body">
+            <p>Sim. A Validar Food foi desenhada pra atender à RDC 216 e demais normas sanitárias, com registro de responsável, data de produção, validade e rastreabilidade — exatamente o que a fiscalização exige.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Vocês atendem redes com várias unidades?</summary>
+          <div class="faq-body">
+            <p>Sim. Hoje temos mais de 150 lojas ativas, incluindo redes com múltiplas unidades. Pra essas operações, oferecemos visão consolidada e padronização entre as lojas. Fala com a gente que montamos uma proposta.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Posso testar antes de contratar?</summary>
+          <div class="faq-body">
+            <p>O melhor caminho é agendar uma demonstração — em 30 minutos a gente te mostra a plataforma rodando com casos reais e você avalia se faz sentido pra sua operação.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO / CTA ============ -->
+  <section class="section section-cta" id="contato">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <span class="eyebrow eyebrow-light">Vamos conversar</span>
+          <h2>Agende uma demonstração</h2>
+          <p>Em 30 minutos a gente te mostra a Validar Food rodando na prática, com casos reais do seu segmento.</p>
+
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="https://wa.me/552126516226" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.4.1-.2 0-.4 0-.5L9.6 7.6c-.2-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.4.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.1-.5-.2zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+              Chamar no WhatsApp
+            </a>
+            <a class="btn btn-ghost-light btn-lg" href="mailto:validarfood@gmail.com">Enviar e-mail</a>
+          </div>
+
+          <div class="cta-tip">
+            <b>Dica:</b> chama no WhatsApp com <b>nome + cidade + número de lojas</b>.<br>
+            Exemplo: <i>"Carlos — RJ — 3 lojas — quero conhecer o Control"</i>.
           </div>
         </div>
 
-        <div class="card">
-          <h3>Pedido de proposta</h3>
-          <p style="color:var(--muted);margin-top:0">
-            Chama no WhatsApp com: <b>nome + cidade + número de lojas</b>.
-          </p>
-          <div style="height:8px"></div>
-          <p style="color:var(--muted);margin:0">
-            Exemplo: “Carlos — RJ — 3 lojas — Quero o plano Completo”.
-          </p>
+        <div class="cta-visual">
+          <div class="cta-channels">
+            <a href="https://wa.me/552126516226" target="_blank" rel="noopener" class="channel-item">
+              <div class="channel-icon channel-wa">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.4.1-.2 0-.4 0-.5L9.6 7.6c-.2-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.4.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.1-.5-.2zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+              </div>
+              <div>
+                <small>WhatsApp</small>
+                <b>(21) 2651-6226</b>
+              </div>
+            </a>
+
+            <a href="mailto:validarfood@gmail.com" class="channel-item">
+              <div class="channel-icon channel-mail">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <small>E-mail</small>
+                <b>validarfood@gmail.com</b>
+              </div>
+            </a>
+
+            <div class="channel-item">
+              <div class="channel-icon channel-pin">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <small>Localização</small>
+                <b>Rio de Janeiro, Brasil</b>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-<footer class="footer">
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
     <div class="container">
-      
       <div class="footer-grid">
         <div class="footer-brand-col">
           <a class="brand" href="#home">
-            <img src="/assets/logo.png" alt="Validar Food" class="logo-img footer-logo">
+            <img src="/assets/logo.png" alt="Validar Food" class="footer-logo">
           </a>
           <p class="footer-desc">
             A plataforma completa para padronizar sua cozinha, evitar desperdícios e garantir a segurança alimentar do seu negócio.
           </p>
-          
+
           <div class="social-links">
             <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
             <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
@@ -332,21 +618,20 @@
         <div>
           <h4 class="footer-title">Produto</h4>
           <ul class="footer-links">
-            <li><a href="#solucoes">Soluções</a></li>
-            <li><a href="#etiquetas">Etiquetas Inteligentes</a></li>
-            <li><a href="#clientes">Quem usa</a></li>
-            <li><a href="#planos">Planos e Preços</a></li>
             <li><a href="#como">Como funciona</a></li>
+            <li><a href="#etiquetas">Etiquetas Inteligentes</a></li>
+            <li><a href="#modulos">Módulos e Preços</a></li>
+            <li><a href="#clientes">Quem usa</a></li>
+            <li><a href="#solucoes">Da dor para o controle</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Suporte</h4>
           <ul class="footer-links">
-            <li><a href="#faq">Central de Ajuda</a></li>
-            <li><a href="#contato">Falar com Consultor</a></li>
-            <li><a href="#">Área do Cliente</a></li>
-            <li><a href="#">Status do Sistema</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="#contato">Falar com consultor</a></li>
+            <li><a href="https://wa.me/552126516226" target="_blank">Suporte via WhatsApp</a></li>
           </ul>
         </div>
 
@@ -355,7 +640,7 @@
           <ul class="footer-links">
             <li><a href="https://wa.me/552126516226" target="_blank">WhatsApp: (21) 2651-6226</a></li>
             <li><a href="mailto:validarfood@gmail.com">validarfood@gmail.com</a></li>
-            <li style="color:var(--muted); font-size:14px; margin-top:10px;">Rio de Janeiro, Brasil 🇧🇷</li>
+            <li class="footer-pin">Rio de Janeiro, Brasil 🇧🇷</li>
           </ul>
         </div>
       </div>
@@ -367,23 +652,19 @@
           <a href="#">Política de Privacidade</a>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <button class="whats-float" id="btnWhatsFloat" aria-label="Abrir WhatsApp" onclick="window.open('https://wa.me/552126516226','_blank')">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M20.5 11.9c0 4.7-3.8 8.6-8.6 8.6-1.5 0-2.9-.4-4.1-1L3.5 20.5l1-4.1c-.6-1.2-1-2.6-1-4.1 0-4.7 3.8-8.6 8.6-8.6 4.7 0 8.4 3.8 8.4 8.2z" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M9.2 9.2c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.3l.7 1.6c.1.2.1.5-.1.7l-.4.4c-.1.1-.1.3 0 .4.4.7 1.3 1.6 2.2 2 .1.1.3 0 .4-.1l.5-.5c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5v.5c0 .2 0 .4-.4.6-.4.2-1.3.4-2.3.1-1-.3-2.2-1-3.2-2-1-1-1.7-2.2-2-3.2-.3-1 .-1.9.2-2.3z" fill="white"/>
+  <!-- WhatsApp flutuante -->
+  <a class="whats-float" href="https://wa.me/552126516226" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.4.1-.2 0-.4 0-.5L9.6 7.6c-.2-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.4.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.1-.5-.2zM12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
     </svg>
-  </button>
+  </a>
 
   <script src="/assets/script.js"></script>
 </body>
 </html>
-
-
-
 
 
 
